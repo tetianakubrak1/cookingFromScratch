@@ -223,6 +223,45 @@ function recipe(name, skill, time, difficulty, tags, ingredients, tools, steps, 
   return { name, skill, time, difficulty, tags, ingredients, tools, steps, substitutions };
 }
 
+cuisines.italian.levels = {
+  beginner: cuisines.italian.week,
+  intermediate: [
+    recipe("Pasta alla Norma", "Eggplant browning, tomato reduction, and salty cheese balance", 45, "Medium", ["sauce", "vegetarian", "no oven"], [["pasta", "100 g rigatoni or penne", 100], ["produce", "1 small eggplant", 1], ["pantry", "220 g passata", 220], ["produce", "1 garlic clove", 1], ["pantry", "2 tbsp olive oil", 2], ["dairy", "30 g ricotta salata or feta", 30], ["produce", "basil, optional", 1]], ["pot", "large frying pan", "knife", "cutting board", "grater"], ["Cube eggplant and salt it for 10 minutes, then pat dry.", "Brown eggplant in olive oil until soft and golden.", "Cook garlic briefly, add passata, and simmer until thicker.", "Cook pasta al dente and toss with sauce and eggplant.", "Finish with basil and grated salty cheese."], ["Feta is easier to find than ricotta salata in Berlin."]),
+    recipe("Carbonara", "Egg-cheese emulsion and residual heat control", 25, "Medium", ["technical", "no oven"], [["pasta", "100 g spaghetti", 100], ["meat", "50 g pancetta or guanciale", 50], ["dairy", "1 egg yolk plus 1 whole egg", 1], ["dairy", "35 g Pecorino Romano", 35], ["pantry", "black pepper", 1], ["pantry", "salt", 1]], ["pot", "frying pan", "bowl", "fine grater", "tongs"], ["Render pancetta gently until crisp.", "Whisk eggs, cheese, and lots of pepper in a bowl.", "Cook pasta and save starchy water.", "Toss hot pasta with pancetta off the heat.", "Add egg mixture and pasta water gradually until glossy, not scrambled."], ["Use Speck or bacon if pancetta is unavailable, but keep the heat gentle."]),
+    recipe("Minestrone", "Layered vegetable flavor and broth seasoning", 50, "Medium", ["soup", "vegetarian", "no oven"], [["produce", "1/2 onion", 0.5], ["produce", "1 carrot", 1], ["produce", "1 celery stalk", 1], ["produce", "150 g seasonal vegetables", 150], ["pantry", "150 g canned beans", 150], ["pantry", "500 ml vegetable stock", 500], ["pantry", "100 g canned tomatoes", 100], ["dairy", "20 g Parmesan", 20]], ["large pot", "knife", "cutting board", "ladle"], ["Cook onion, carrot, and celery slowly in olive oil for 8 minutes.", "Add vegetables, beans, tomatoes, and stock.", "Simmer until vegetables are tender but not dull.", "Season carefully with salt and pepper.", "Serve with Parmesan and olive oil."], ["Use frozen soup vegetables when produce is not inspiring."]),
+    recipe("Mushroom Risotto with Dried Porcini", "Dried mushroom soaking and deeper risotto technique", 45, "Medium", ["rice", "vegetarian", "no oven"], [["pantry", "85 g Arborio or Carnaroli rice", 85], ["produce", "120 g mushrooms", 120], ["pantry", "8 g dried porcini", 8], ["produce", "1/2 small onion", 0.5], ["pantry", "550 ml vegetable stock", 550], ["dairy", "1 tbsp butter", 1], ["dairy", "30 g Parmesan", 30]], ["small bowl", "saucepan", "medium pot", "knife", "wooden spoon"], ["Soak dried porcini in hot water for 10 minutes and strain the liquid.", "Cook onion and fresh mushrooms until browned.", "Toast rice for 1 minute.", "Add warm stock and porcini liquid gradually while stirring.", "Finish off heat with butter and Parmesan."], ["Dried porcini are often in Italian delis or larger supermarkets."]),
+    recipe("Saltimbocca-Style Chicken", "Layering, fast searing, and pan deglazing", 30, "Medium", ["protein", "no oven"], [["meat", "150 g chicken breast, thinly sliced", 150], ["meat", "2 slices prosciutto", 2], ["produce", "4 sage leaves", 1], ["pantry", "1 tbsp flour", 1], ["dairy", "1 tbsp butter", 1], ["pantry", "70 ml stock or white wine", 70]], ["frying pan", "toothpicks", "plate", "tongs"], ["Flatten chicken pieces gently.", "Top with sage and prosciutto, securing if needed.", "Dust lightly with flour.", "Sear quickly on both sides.", "Deglaze with stock or wine and finish with butter."], ["Use thin chicken schnitzel from a German supermarket to save prep time."]),
+    recipe("Handmade Ricotta Gnocchi", "Soft dough handling and gentle boiling", 55, "Medium", ["vegetarian", "no oven"], [["dairy", "125 g ricotta", 125], ["dairy", "1 egg yolk", 1], ["pantry", "45 g flour, plus extra", 45], ["dairy", "25 g Parmesan", 25], ["dairy", "1 tbsp butter", 1], ["produce", "sage or herbs", 1]], ["bowl", "fork", "pot", "bench scraper or knife", "frying pan"], ["Drain ricotta if wet.", "Mix ricotta, yolk, flour, Parmesan, salt, and pepper into a soft dough.", "Roll gently into ropes and cut small pieces.", "Boil until they float.", "Toss in butter with sage or herbs."], ["Quark is too wet; ricotta is worth buying for this dish."]),
+    recipe("Panna Cotta with Berry Sauce", "Gelatin setting and simple fruit sauce", 25, "Medium", ["dessert", "make ahead", "no oven"], [["dairy", "200 ml cream", 200], ["dairy", "80 ml milk", 80], ["pantry", "1.5 tbsp sugar", 1.5], ["pantry", "1.5 sheets gelatin", 1.5], ["frozen", "100 g frozen berries", 100]], ["small saucepan", "bowl", "whisk", "small glass"], ["Soak gelatin in cold water.", "Warm cream, milk, and sugar without boiling.", "Stir in squeezed gelatin until dissolved.", "Pour into a glass and chill for at least 4 hours.", "Cook berries briefly into a sauce and spoon over."], ["Frozen berries are reliable year-round in Germany."])
+  ]
+};
+
+cuisines.japanese.levels = {
+  beginner: cuisines.japanese.week,
+  intermediate: [
+    recipe("Katsudon", "Breaded cutlet timing and egg simmering", 45, "Medium", ["protein", "no oven"], [["meat", "150 g pork or chicken schnitzel", 150], ["dairy", "1 egg for coating plus 1 egg for simmering", 2], ["pantry", "30 g flour", 30], ["pantry", "50 g panko", 50], ["pantry", "80 g rice", 80], ["produce", "1/2 onion", 0.5], ["pantry", "soy sauce and sugar", 1]], ["pot", "frying pan", "shallow bowls", "knife"], ["Cook rice.", "Coat cutlet in flour, egg, and panko.", "Pan-fry until crisp and cooked.", "Simmer onion with soy, sugar, and water.", "Slice cutlet, add to pan, pour egg around it, and serve over rice."], ["German Schnitzel cuts make this easier."]),
+    recipe("Okonomiyaki", "Cabbage batter and controlled pan browning", 40, "Medium", ["vegetarian", "no oven"], [["produce", "180 g cabbage", 180], ["dairy", "1 egg", 1], ["pantry", "60 g flour", 60], ["pantry", "80 ml water or dashi", 80], ["pantry", "1 tbsp soy sauce", 1], ["dairy", "mayonnaise, optional", 1]], ["bowl", "frying pan", "spatula", "knife"], ["Shred cabbage finely.", "Mix flour, egg, water, and soy into a thick batter.", "Fold cabbage into batter.", "Cook as a thick pancake on medium heat until browned.", "Flip carefully and finish with sauce or mayonnaise."], ["Use ordinary cabbage from any supermarket."]),
+    recipe("Shoyu Ramen Shortcut", "Broth seasoning, noodle timing, and toppings", 45, "Medium", ["soup"], [["pasta", "120 g ramen or mie noodles", 120], ["pantry", "600 ml chicken or vegetable stock", 600], ["pantry", "1.5 tbsp soy sauce", 1.5], ["produce", "1 garlic clove", 1], ["produce", "1 tsp ginger", 1], ["dairy", "1 egg", 1], ["produce", "spring onion", 1]], ["saucepan", "pot", "knife"], ["Boil egg for 7 minutes and cool it.", "Simmer stock with garlic, ginger, and soy sauce.", "Cook noodles separately.", "Taste broth and adjust saltiness.", "Serve noodles with broth, egg, and spring onion."], ["Mie noodles are acceptable for a learning version."]),
+    recipe("Oyakodon", "Gentle egg setting in a rice bowl", 30, "Medium", ["protein", "no oven"], [["meat", "130 g chicken thigh or breast", 130], ["dairy", "2 eggs", 2], ["produce", "1/2 onion", 0.5], ["pantry", "80 g rice", 80], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1]], ["pot", "frying pan with lid", "bowl"], ["Cook rice.", "Simmer onion with soy, sugar, and water.", "Add small chicken pieces and cook through.", "Pour beaten egg over the chicken.", "Cover briefly so egg sets softly, then slide over rice."], ["Chicken thigh stays juicier, but breast works."]),
+    recipe("Agedashi-Style Tofu", "Crisping tofu and quick sauce", 35, "Medium", ["vegetarian", "no oven"], [["produce", "180 g firm tofu", 180], ["pantry", "2 tbsp cornstarch", 2], ["pantry", "1 tbsp soy sauce", 1], ["produce", "1 tsp grated ginger", 1], ["produce", "spring onion", 1], ["pantry", "oil for frying", 1]], ["paper towels", "frying pan", "small saucepan"], ["Press tofu between towels for 10 minutes.", "Cut and coat lightly in cornstarch.", "Pan-fry until crisp.", "Warm soy sauce, ginger, and a little water.", "Pour sauce around tofu and top with spring onion."], ["Firm tofu from Asian markets works best."]),
+    recipe("Soba with Mushroom Dipping Broth", "Noodle rinsing and concentrated broth", 30, "Medium", ["vegetarian", "no oven"], [["pasta", "100 g soba noodles", 100], ["produce", "120 g mushrooms", 120], ["pantry", "2 tbsp soy sauce", 2], ["pantry", "1 tsp sugar", 1], ["produce", "spring onion", 1]], ["pot", "saucepan", "colander", "knife"], ["Cook soba and rinse cold.", "Brown mushrooms in a small saucepan.", "Add soy sauce, sugar, and water to make a strong broth.", "Serve noodles cool with warm dipping broth.", "Top with spring onion."], ["Use buckwheat soba if available; wheat noodles still teach the flow."]),
+    recipe("Dorayaki", "Small pancakes and sweet filling", 35, "Medium", ["dessert", "vegetarian", "no oven"], [["dairy", "1 egg", 1], ["pantry", "45 g flour", 45], ["pantry", "1 tbsp sugar", 1], ["pantry", "1/2 tsp baking powder", 0.5], ["pantry", "60 g sweet red bean paste or jam", 60]], ["bowl", "whisk", "frying pan", "spatula"], ["Whisk egg and sugar.", "Add flour, baking powder, and a splash of water.", "Cook small pancakes on low-medium heat.", "Cool slightly.", "Sandwich with red bean paste or jam."], ["Jam is a practical stand-in if you cannot find anko."])
+  ]
+};
+
+cuisines.mexican.levels = {
+  beginner: cuisines.mexican.week,
+  intermediate: [
+    recipe("Chilaquiles Verdes Shortcut", "Sauce simmering and keeping tortilla texture", 35, "Medium", ["vegetarian", "no oven"], [["bakery", "60 g tortilla chips", 60], ["pantry", "200 g salsa verde", 200], ["dairy", "1 egg", 1], ["dairy", "40 g feta or sour cream", 40], ["produce", "1 lime", 1], ["produce", "coriander or parsley", 1]], ["frying pan", "small saucepan", "spatula"], ["Warm salsa verde in a pan.", "Fold in tortilla chips briefly so some edges stay crisp.", "Fry an egg.", "Top chips with egg, feta or sour cream, herbs, and lime.", "Eat immediately."], ["Jarred salsa verde from a Mexican shop makes this weeknight-friendly."]),
+    recipe("Chicken Mole-Inspired Bowl", "Layered sauce with spices and chocolate", 50, "Medium", ["protein", "no oven"], [["meat", "160 g chicken", 160], ["pantry", "200 g passata", 200], ["pantry", "1 tsp cocoa powder", 1], ["pantry", "1 tsp peanut butter", 1], ["pantry", "chili powder", 1], ["pantry", "80 g rice", 80], ["produce", "1/2 onion", 0.5]], ["pot", "saucepan", "knife", "forks"], ["Cook rice.", "Simmer chicken until cooked and shred it.", "Cook onion, then add passata, cocoa, peanut butter, chili, and salt.", "Simmer until the sauce tastes rounded.", "Stir in chicken and serve over rice."], ["This is a learning-friendly mole-inspired sauce, not traditional mole."]),
+    recipe("Tostadas with Refried Beans", "Bean texture and crisp assembly", 30, "Medium", ["vegetarian", "no oven"], [["bakery", "2 tortillas", 2], ["pantry", "220 g canned beans", 220], ["produce", "1/2 onion", 0.5], ["dairy", "40 g feta or sour cream", 40], ["produce", "1 lime", 1], ["produce", "cabbage or lettuce", 1]], ["frying pan", "fork", "knife"], ["Toast tortillas in a dry pan until crisp.", "Cook onion, add beans, and mash with a splash of water.", "Season beans with salt and lime.", "Spread beans on tostadas.", "Top with cabbage and cheese or sour cream."], ["Kidney beans work if black or pinto beans are unavailable."]),
+    recipe("Enchiladas Rojas Skillet", "Sauce coating and pan assembly", 45, "Medium", ["vegetarian", "no oven"], [["bakery", "3 tortillas", 3], ["pantry", "250 g passata", 250], ["pantry", "150 g canned beans", 150], ["dairy", "80 g grated cheese", 80], ["produce", "1/2 onion", 0.5], ["pantry", "chili powder", 1]], ["frying pan with lid", "small saucepan", "spatula"], ["Simmer passata with onion, chili, and salt into a sauce.", "Fill tortillas with beans and a little cheese.", "Roll and place in a pan.", "Cover with sauce and remaining cheese.", "Cover until hot and melted."], ["Use Gouda if Mexican cheese is unavailable."]),
+    recipe("Calabacitas", "Vegetable saute and sweetness-acid balance", 30, "Medium", ["vegetarian", "no oven"], [["produce", "1 zucchini", 1], ["frozen", "100 g corn", 100], ["produce", "1/2 onion", 0.5], ["pantry", "100 g passata", 100], ["dairy", "30 g feta", 30], ["produce", "1/2 lime", 0.5]], ["frying pan", "knife", "spatula"], ["Cook onion until soft.", "Add zucchini and corn and saute until browned in spots.", "Add passata and simmer briefly.", "Season with salt and lime.", "Finish with crumbled feta."], ["A good way to practice vegetables without needing special ingredients."]),
+    recipe("Arroz con Pollo-ish", "One-pot rice and protein timing", 45, "Medium", ["protein", "no oven"], [["meat", "150 g chicken", 150], ["pantry", "90 g rice", 90], ["pantry", "250 ml stock", 250], ["produce", "1/2 onion", 0.5], ["produce", "1 garlic clove", 1], ["pantry", "100 g passata", 100], ["frozen", "80 g peas or corn", 80]], ["wide pot with lid", "knife", "spatula"], ["Brown seasoned chicken pieces.", "Cook onion and garlic in the same pot.", "Add rice, passata, stock, and vegetables.", "Nestle chicken back in.", "Cover and cook gently until rice is done."], ["Use boneless chicken for a faster learning version."]),
+    recipe("Cajeta-Style Yogurt Dessert", "Caramel notes and dessert layering", 20, "Medium", ["dessert", "vegetarian", "no oven"], [["dairy", "150 g Greek yogurt", 150], ["pantry", "1 tbsp dulce de leche or caramel", 1], ["bakery", "1 biscuit or cookie", 1], ["pantry", "cinnamon", 1], ["produce", "banana or berries, optional", 1]], ["glass", "spoon", "small bowl"], ["Crush biscuit into a glass.", "Mix yogurt with a little cinnamon.", "Layer yogurt and caramel.", "Add fruit if using.", "Chill briefly or eat right away."], ["Dulce de leche is sometimes in Latin shops; caramel spread also works."])
+  ]
+};
+
 const categories = {
   produce: "Produce",
   pantry: "Pantry",
@@ -264,7 +303,7 @@ Object.entries(cuisines).forEach(([key, cuisine]) => {
 });
 
 function getWeek() {
-  const base = cuisines[state.cuisine].week.map((dish) => {
+  const base = getBaseWeek().map((dish) => {
     if (!state.vegetarian || isVegetarianDish(dish)) return dish;
     return getCandidates().find((candidate) => isVegetarianDish(candidate)) || dish;
   });
@@ -278,11 +317,16 @@ function getWeek() {
 
 function getCandidates() {
   const cuisine = cuisines[state.cuisine];
-  return [...cuisine.week, ...(cuisine.alternatives || [])].filter((dish) => {
+  return [...getBaseWeek(), ...(cuisine.alternatives || [])].filter((dish) => {
     if (state.vegetarian && !isVegetarianDish(dish)) return false;
     if (state.noOven && dish.tags.includes("oven")) return false;
     return true;
   });
+}
+
+function getBaseWeek() {
+  const cuisine = cuisines[state.cuisine];
+  return cuisine.levels?.[state.level] || cuisine.week;
 }
 
 function isVegetarianDish(dish) {
@@ -291,11 +335,11 @@ function isVegetarianDish(dish) {
 }
 
 function swapKey(dayIndex) {
-  return `${state.cuisine}-${dayIndex}`;
+  return `${state.cuisine}-${state.level}-${dayIndex}`;
 }
 
 function progressKey(dayIndex) {
-  return `${state.cuisine}-${dayIndex}`;
+  return `${state.cuisine}-${state.level}-${dayIndex}`;
 }
 
 function scaledText(text, amount) {
@@ -656,6 +700,7 @@ cuisineSelect.addEventListener("change", (event) => {
 
 levelSelect.addEventListener("change", (event) => {
   state.level = event.target.value;
+  state.selectedDay = 0;
   render();
 });
 
