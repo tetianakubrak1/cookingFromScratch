@@ -431,6 +431,195 @@ const translations = {
   }
 };
 
+const ingredientTranslations = {
+  "aglio e olio": "aglio e olio",
+  "arborio or carnaroli rice": "рис Arborio або Carnaroli",
+  "avocado": "авокадо",
+  "bacon or lardons": "бекон або лардони",
+  "basil, fresh or dried": "базилік, свіжий або сушений",
+  "basil, optional": "базилік, за бажанням",
+  "beef stew meat": "яловичина для тушкування",
+  "bell pepper": "солодкий перець",
+  "berries or apple": "ягоди або яблуко",
+  "black pepper": "чорний перець",
+  "bread": "скибочки хліба",
+  "broccoli": "броколі",
+  "buckwheat or wheat flour": "гречане або пшеничне борошно",
+  "butter": "вершкове масло",
+  "cabbage": "капуста",
+  "canned beans": "консервована квасоля",
+  "canned black beans": "консервована чорна квасоля",
+  "canned chickpeas": "консервований нут",
+  "canned tomatoes": "консервовані томати",
+  "canned tomatoes or passata": "консервовані томати або пасата",
+  "canned white beans": "консервована біла квасоля",
+  "carrot": "морква",
+  "celery stalk": "стебло селери",
+  "chicken": "курка",
+  "chicken breast": "куряча грудка",
+  "chicken breast or pork schnitzel": "куряча грудка або свинячий шніцель",
+  "chicken breast or thigh": "куряча грудка або стегно",
+  "chicken breast, thinly sliced": "куряча грудка, тонко нарізана",
+  "chicken thigh": "куряче стегно",
+  "chicken thigh or breast": "куряче стегно або грудка",
+  "chili bean sauce": "чилі-бобовий соус",
+  "chili flakes": "пластівці чилі",
+  "chili flakes, optional": "пластівці чилі, за бажанням",
+  "chili oil": "чилі-олія",
+  "chili powder": "мелений чилі",
+  "cinnamon": "кориця",
+  "cocoa powder": "какао-порошок",
+  "coconut milk": "кокосове молоко",
+  "cooked lentils": "варена сочевиця",
+  "cooked rice": "варений рис",
+  "coriander or parsley": "коріандр або петрушка",
+  "corn": "кукурудза",
+  "cornstarch": "кукурудзяний крохмаль",
+  "cornstarch, optional": "кукурудзяний крохмаль, за бажанням",
+  "cream": "вершки",
+  "cucumber": "огірок",
+  "cucumber or avocado": "огірок або авокадо",
+  "cucumber or carrot": "огірок або морква",
+  "dark chocolate": "темний шоколад",
+  "dashi or vegetable stock": "даші або овочевий бульйон",
+  "dijon mustard": "діжонська гірчиця",
+  "doubanjiang or chili bean sauce": "доубаньцзян або чилі-бобовий соус",
+  "dried porcini": "сушені білі гриби",
+  "egg": "яйце",
+  "egg for batter plus 1 egg for filling": "яйце для тіста та 1 яйце для начинки",
+  "egg yolk": "яєчний жовток",
+  "egg yolk plus 1 whole egg": "яєчний жовток та 1 ціле яйце",
+  "eggplant": "баклажан",
+  "espresso or strong coffee": "еспресо або міцна кава",
+  "feta": "фета",
+  "feta or yogurt": "фета або йогурт",
+  "firm tofu": "твердий тофу",
+  "five-spice": "суміш five-spice",
+  "five-spice or paprika": "суміш five-spice або паприка",
+  "flour": "борошно",
+  "flour, plus extra": "борошно, плюс трохи додатково",
+  "fresh herbs or chives": "свіжа зелень або шніт-цибуля",
+  "fresh herbs or parsley": "свіжа зелень або петрушка",
+  "fresh herbs or spring onion": "свіжа зелень або зелена цибуля",
+  "fresh parsley": "свіжа петрушка",
+  "fromage blanc or greek yogurt": "fromage blanc або грецький йогурт",
+  "frozen berries": "заморожені ягоди",
+  "frozen gyoza": "заморожені ґьодза",
+  "gelatin": "желатин",
+  "ginger": "імбир",
+  "garlic clove": "зубчики часнику",
+  "glutinous rice flour": "клейке рисове борошно",
+  "grated cheese": "тертий сир",
+  "grated ginger": "тертий імбир",
+  "green beans": "зелена квасоля",
+  "green beans or lettuce": "зелена квасоля або салат",
+  "green tea or light stock": "зелений чай або легкий бульйон",
+  "ham": "скибка шинки",
+  "herbs, optional": "зелень, за бажанням",
+  "honey": "мед",
+  "honey, optional": "мед, за бажанням",
+  "hot sauce, optional": "гострий соус, за бажанням",
+  "ketchup": "кетчуп",
+  "lemon": "лимон",
+  "lime": "лайм",
+  "loffelbiskuits": "печиво савоярді",
+  "long grain rice": "довгозернистий рис",
+  "mango or frozen mango": "манго або заморожене манго",
+  "mascarpone": "маскарпоне",
+  "matcha": "матча",
+  "mayonnaise": "майонез",
+  "milk": "молоко",
+  "milk or water": "молоко або вода",
+  "minced pork or mushrooms": "свинячий фарш або гриби",
+  "mirin or sugar water": "мірін або підсолоджена вода",
+  "miso paste": "місо-паста",
+  "mixed vegetables": "овочева суміш",
+  "mozzarella, optional": "моцарела, за бажанням",
+  "mushrooms": "гриби",
+  "neutral oil": "нейтральна олія",
+  "no oven": "без духовки",
+  "nori sheet": "лист норі",
+  "nuts": "горіхи",
+  "olive oil": "оливкова олія",
+  "onion": "цибуля",
+  "pancetta or guanciale": "панчета або гуанчале",
+  "parmesan": "пармезан",
+  "parmesan or grana padano": "пармезан або Grana Padano",
+  "parmesan or grana padano, optional": "пармезан або Grana Padano, за бажанням",
+  "parsley, optional": "петрушка, за бажанням",
+  "passata": "пасата",
+  "passata or canned tomatoes": "пасата або консервовані томати",
+  "peanut butter or sesame paste": "арахісова паста або кунжутна паста",
+  "peanuts": "арахіс",
+  "peas or mixed vegetables": "горошок або овочева суміш",
+  "pecorino romano": "Pecorino Romano",
+  "penne": "пенне",
+  "penne or spaghetti": "пенне або спагеті",
+  "potato, optional": "картопля, за бажанням",
+  "potatoes": "картопля",
+  "prosciutto": "прошутто",
+  "red onion": "червона цибуля",
+  "red wine or stock": "червоне вино або бульйон",
+  "rice": "рис",
+  "ricotta": "рикота",
+  "ricotta salata or feta": "ricotta salata або фета",
+  "rigatoni or penne": "ригатоні або пенне",
+  "roasted peppers from a jar": "печений перець з банки",
+  "sage leaves": "листя шавлії",
+  "sage or herbs": "шавлія або зелень",
+  "salmon fillet": "філе лосося",
+  "salt": "сіль",
+  "salt and black pepper": "сіль і чорний перець",
+  "salt and pepper": "сіль і перець",
+  "seasonal vegetables": "сезонні овочі",
+  "sesame oil, optional": "кунжутна олія, за бажанням",
+  "sesame seeds": "кунжут",
+  "shallot or onion": "шалот або цибуля",
+  "shortcrust pastry": "пісочне тісто",
+  "small can tuna": "маленька банка тунця",
+  "small eggplant": "маленький баклажан",
+  "small ready-made shortcrust pastry": "маленьке готове пісочне тісто",
+  "small tapioca pearls or pudding rice": "маленькі перлини тапіоки або рис для пудингу",
+  "small zucchini": "маленький цукіні",
+  "smoked paprika": "копчена паприка",
+  "soba noodles": "локшина соба",
+  "soft white bread": "скибки м'якого білого хліба",
+  "soy sauce": "соєвий соус",
+  "soy sauce and vinegar": "соєвий соус і оцет",
+  "spaghetti": "спагеті",
+  "spaghetti or bucatini": "спагеті або букатіні",
+  "spinach": "шпинат",
+  "spring onion": "зелена цибуля",
+  "stale bread": "скибки черствого хліба",
+  "stock": "бульйон",
+  "stock or water": "бульйон або вода",
+  "stock or white wine": "бульйон або біле вино",
+  "store-bought gnocchi": "готові ньокі",
+  "sugar": "цукор",
+  "sugar water": "підсолоджена вода",
+  "sugar, optional": "цукор, за бажанням",
+  "sushi rice": "рис для суші",
+  "thick slice bread": "товста скибка хліба",
+  "thin noodles": "тонка локшина",
+  "tofu": "тофу",
+  "tomato or 180 g canned tomato": "помідори або 180 г консервовані томати",
+  "tomatoes or canned tomatoes": "помідори або консервовані томати",
+  "tortillas": "тортильї",
+  "vanilla, optional": "ваніль, за бажанням",
+  "vegetable stock": "овочевий бульйон",
+  "vinegar": "оцет",
+  "wakame, optional": "вакаме, за бажанням",
+  "warm water": "тепла вода",
+  "wheat noodles": "пшенична локшина",
+  "whipping cream": "вершки для збивання",
+  "white fish fillet": "філе білої риби",
+  "worcestershire sauce": "вустерський соус",
+  "yogurt": "йогурт",
+  "yogurt or sour cream": "йогурт або сметана",
+  "yogurt, optional": "йогурт, за бажанням",
+  "zucchini": "цукіні"
+};
+
 const state = {
   cuisine: "italian",
   level: "beginner",
@@ -589,6 +778,58 @@ function scaledText(text, amount) {
   return original ? text.replace(original, scaled) : `${text} x ${state.servings}`;
 }
 
+function displayIngredient(text, amount) {
+  if (state.language !== "uk") return scaledText(text, amount);
+  return translateIngredientText(text, amount);
+}
+
+function translateIngredientText(text, amount) {
+  const parsed = parseIngredient(text, amount);
+  if (parsed.amount !== null) {
+    const quantity = formatQuantity(parsed.amount * state.servings);
+    const translatedUnit = translateUnit(parsed.unit);
+    const translatedName = parsed.unit
+      ? translateIngredientName(parsed.displayName)
+      : translateCountIngredientName(parsed.displayName, parsed.amount * state.servings);
+    return [quantity, translatedUnit, translatedName].filter(Boolean).join(" ");
+  }
+  return translateIngredientName(scaledText(text, amount));
+}
+
+function translateUnit(unit) {
+  return {
+    g: "г",
+    ml: "мл",
+    tbsp: "ст. л.",
+    tsp: "ч. л."
+  }[unit] || unit;
+}
+
+function translateIngredientName(name) {
+  const normalized = normalizeIngredientName(name);
+  if (ingredientTranslations[normalized]) return ingredientTranslations[normalized];
+
+  const withoutPortionWords = normalized
+    .replace(/^slices? /, "")
+    .replace(/^small /, "")
+    .replace(/^thick slice /, "");
+  if (ingredientTranslations[withoutPortionWords]) return ingredientTranslations[withoutPortionWords];
+
+  return Object.entries(ingredientTranslations)
+    .sort((a, b) => b[0].length - a[0].length)
+    .reduce((value, [english, ukrainian]) => value.replaceAll(english, ukrainian), normalized)
+    .replace(/\bor\b/g, "або")
+    .replace(/\bplus\b/g, "та")
+    .replace(/\bto\b/g, "–");
+}
+
+function translateCountIngredientName(name, quantity) {
+  const normalized = normalizeIngredientName(name);
+  if (normalized === "egg") return quantity === 1 ? "яйце" : "яйця";
+  if (normalized === "garlic clove") return quantity === 1 ? "зубчик часнику" : "зубчики часнику";
+  return translateIngredientName(name);
+}
+
 function quantityToken(text, amount) {
   const candidates = [
     String(amount),
@@ -654,6 +895,7 @@ function normalizeIngredientName(name) {
     .replace(/\blemons\b/g, "lemon")
     .replace(/\bonions\b/g, "onion")
     .replace(/\bcucumbers\b/g, "cucumber")
+    .replace(/\btomatoes\b/g, "tomato")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -702,10 +944,14 @@ function buildShoppingGroups(week) {
 }
 
 function formatShoppingItem(item) {
-  if (item.amount === null) return item.text;
+  if (item.amount === null) return state.language === "uk" ? translateIngredientName(item.text) : item.text;
   const quantity = formatQuantity(item.amount);
+  const unit = state.language === "uk" ? translateUnit(item.unit) : item.unit;
   const name = item.unit ? item.displayName : pluralizeIngredient(item.displayName, item.amount);
-  return [quantity, item.unit, name].filter(Boolean).join(" ");
+  const displayName = state.language === "uk"
+    ? item.unit ? translateIngredientName(name) : translateCountIngredientName(name, item.amount)
+    : name;
+  return [quantity, unit, displayName].filter(Boolean).join(" ");
 }
 
 function render() {
@@ -782,7 +1028,7 @@ function renderRecipe(dish) {
       <div class="info-block">
         <h3>${t("ingredients")}</h3>
         <ul class="list">
-          ${dish.ingredients.map((item) => `<li>${scaledText(item[1], item[2])}</li>`).join("")}
+          ${dish.ingredients.map((item) => `<li>${displayIngredient(item[1], item[2])}</li>`).join("")}
         </ul>
         <h3>${t("tools")}</h3>
         <ul class="list">
