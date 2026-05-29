@@ -947,13 +947,13 @@ function showPhotoPlaceholder(image, dishName) {
 
 function dishPhoto(dish) {
   const photos = {
-    "Spaghetti Aglio e Olio": filePhoto("Spaghetti aglio e olio KB.jpg"),
-    "Cacio e Pepe": filePhoto("Cacio e pepe.jpg"),
-    "Pasta al Pomodoro": filePhoto("Pasta al pomodoro.JPG"),
-    "Risotto ai Funghi": filePhoto("Risotto ai funghi porcini.JPG"),
-    "Scaloppine al Limone": filePhoto("Scaloppine al limone.jpg"),
-    "Gnocchi with Sage Butter": filePhoto("Zuni ricotta gnocchi with browned butter and sage.jpg"),
-    "Tiramisu Cup": filePhoto("Tiramisu in a cup, July 2007.jpg"),
+    "Spaghetti Aglio e Olio": localPhoto("spaghetti-aglio-e-olio.jpg"),
+    "Cacio e Pepe": localPhoto("cacio-e-pepe.jpg"),
+    "Pasta al Pomodoro": localPhoto("pasta-al-pomodoro.jpg"),
+    "Risotto ai Funghi": localPhoto("risotto-ai-funghi.jpg"),
+    "Scaloppine al Limone": localPhoto("scaloppine-al-limone.jpg"),
+    "Gnocchi with Sage Butter": localPhoto("gnocchi-with-sage-butter.jpg"),
+    "Tiramisu Cup": localPhoto("tiramisu-cup.jpg"),
     "Pasta alla Norma": directPhoto("Pasta alla Norma (2563876877).jpg", "https://upload.wikimedia.org/wikipedia/commons/3/3f/Pasta_alla_Norma_%282563876877%29.jpg"),
     "Carbonara": directPhoto("Espaguetis carbonara.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/960px-Espaguetis_carbonara.jpg"),
     "Minestrone": directPhoto("Minestrone soup.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Minestrone_soup.jpg/960px-Minestrone_soup.jpg"),
@@ -1005,6 +1005,15 @@ function dishPhoto(dish) {
   const photo = photos[dish.name];
   if (!photo) return null;
   return photo;
+}
+
+function localPhoto(fileName) {
+  const url = `assets/dishes/${fileName}`;
+  return {
+    url,
+    source: url,
+    credit: "Generated image"
+  };
 }
 
 function filePhoto(fileName) {
