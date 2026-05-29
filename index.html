@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cuisine Coach</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="side-panel" aria-label="Program settings">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">CC</div>
+          <div>
+            <h1>Cuisine Coach</h1>
+            <p>Learn one dish a day.</p>
+          </div>
+        </div>
+
+        <form class="controls" id="program-form">
+          <label for="cuisine-select">
+            <span>Cuisine</span>
+            <select id="cuisine-select" aria-label="Cuisine"></select>
+          </label>
+
+          <label for="level-select">
+            <span>Level</span>
+            <select id="level-select" aria-label="Level">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+            </select>
+          </label>
+
+          <label for="servings-input">
+            <span>Servings</span>
+            <input id="servings-input" type="number" min="1" max="6" value="1" aria-label="Servings">
+          </label>
+
+          <fieldset>
+            <legend>Constraints</legend>
+            <label class="check-row">
+              <input id="vegetarian-input" type="checkbox">
+              <span>Vegetarian</span>
+            </label>
+            <label class="check-row">
+              <input id="no-oven-input" type="checkbox" checked>
+              <span>No oven</span>
+            </label>
+          </fieldset>
+        </form>
+
+        <section class="market-card" aria-label="Germany ingredient help">
+          <h2>Germany Mode</h2>
+          <p>Plans prefer ingredients found at Rewe, Edeka, Aldi, Lidl, Asian markets, Turkish markets, or Italian delis in Berlin.</p>
+        </section>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">7-day cooking path</p>
+            <h2 id="program-title">Italian Beginner Week</h2>
+          </div>
+          <div class="top-actions" role="group" aria-label="View switcher">
+            <button class="tab-button active" type="button" data-view="plan">Plan</button>
+            <button class="tab-button" type="button" data-view="shopping">Shopping</button>
+            <button class="tab-button" type="button" data-view="progress">Progress</button>
+          </div>
+        </header>
+
+        <section class="view active" id="plan-view" aria-label="Weekly plan">
+          <div class="day-rail" id="day-rail"></div>
+          <article class="recipe-panel" id="recipe-panel"></article>
+        </section>
+
+        <section class="view" id="shopping-view" aria-label="Shopping list">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">For the whole week</p>
+              <h2>Shopping List</h2>
+            </div>
+            <button class="ghost-button" type="button" id="copy-shopping">Copy list</button>
+          </div>
+          <div class="shopping-grid" id="shopping-list"></div>
+        </section>
+
+        <section class="view" id="progress-view" aria-label="Progress tracker">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Your notes</p>
+              <h2>Cooking Progress</h2>
+            </div>
+            <button class="ghost-button" type="button" id="reset-progress">Reset</button>
+          </div>
+          <div class="progress-grid" id="progress-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
