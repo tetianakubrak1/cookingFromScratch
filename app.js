@@ -620,6 +620,109 @@ const ingredientTranslations = {
   "zucchini": "цукіні"
 };
 
+const toolTranslations = {
+  "baking dish": "форма для запікання",
+  "baking paper": "папір для випікання",
+  "baking tray": "деко",
+  "bench scraper or knife": "скребок для тіста або ніж",
+  "blender or fork": "блендер або виделка",
+  bowl: "миска",
+  brush: "пензлик",
+  colander: "друшляк",
+  "cutting board": "дошка для нарізання",
+  "fine grater": "дрібна тертка",
+  fork: "виделка",
+  "frying pan": "пательня",
+  glass: "склянка",
+  grater: "тертка",
+  "heavy pot": "каструля з товстим дном",
+  knife: "ніж",
+  ladle: "ополоник",
+  "large frying pan": "велика пательня",
+  "large pot": "велика каструля",
+  "medium pot": "середня каструля",
+  oven: "духовка",
+  "pan or toaster": "пательня або тостер",
+  plate: "тарілка",
+  pot: "каструля",
+  "pot with steamer or covered pan": "каструля з пароваркою або пательня з кришкою",
+  saucepan: "сотейник",
+  sieve: "сито",
+  "slotted spoon": "шумівка",
+  "small baking dish": "маленька форма для запікання",
+  "small bowl": "маленька миска",
+  "small frying pan": "маленька пательня",
+  "small glass": "маленька склянка",
+  "small glass or dish": "маленька склянка або форма",
+  "small pan": "маленька пательня",
+  "small pot": "маленька каструля",
+  "small ramekin": "маленька керамічна формочка",
+  "small saucepan": "маленький сотейник",
+  "small saucepan or microwave": "маленький сотейник або мікрохвильовка",
+  "small tart dish": "маленька форма для тарта",
+  spatula: "лопатка",
+  spoon: "ложка",
+  tongs: "щипці",
+  toothpicks: "зубочистки",
+  whisk: "вінчик",
+  "wok or frying pan": "вок або пательня",
+  "wooden spoon": "дерев'яна ложка"
+};
+
+const textTranslations = {
+  "Grana Padano is easier to find and cheaper than Parmesan.": "Grana Padano легше знайти, і він дешевший за пармезан.",
+  "Use dried parsley if fresh herbs look tired.": "Використай сушену петрушку, якщо свіжа зелень виглядає не дуже.",
+  "Use Grana Padano if Pecorino is unavailable, but salt the pasta water a little more.": "Використай Grana Padano, якщо немає Pecorino, але трохи сильніше посоли воду для пасти.",
+  "Passata from any German supermarket works well here.": "Пасата з будь-якого німецького супермаркету тут добре підійде.",
+  "Use Mutti or store-brand canned tomatoes.": "Візьми Mutti або консервовані томати власної марки супермаркету.",
+  "Brown Champignons are good in Berlin supermarkets.": "Коричневі печериці з берлінських супермаркетів добре підходять.",
+  "Dried porcini from Italian shops make it deeper.": "Сушені білі гриби з італійських магазинів дадуть глибший смак.",
+  "German minute steaks or thin Schnitzel cuts work well.": "Німецькі minute steaks або тонкі шматки для шніцеля добре працюють.",
+  "Vacuum-packed gnocchi from Rewe, Edeka, Aldi, or Lidl is fine for practice.": "Вакуумні ньокі з Rewe, Edeka, Aldi або Lidl цілком підходять для практики.",
+  "This egg-free version is simpler and calmer for a first try.": "Ця версія без яєць простіша і спокійніша для першої спроби.",
+  "Feta is easier to find than ricotta salata in Berlin.": "Фету в Берліні знайти легше, ніж ricotta salata.",
+  "Use Speck or bacon if pancetta is unavailable, but keep the heat gentle.": "Використай Speck або бекон, якщо немає панчети, але готуй на помірному вогні.",
+  "Use frozen soup vegetables when produce is not inspiring.": "Використай заморожені овочі для супу, якщо свіжі овочі не надихають.",
+  "Dried porcini are often in Italian delis or larger supermarkets.": "Сушені білі гриби часто є в італійських делі або великих супермаркетах.",
+  "Use thin chicken schnitzel from a German supermarket to save prep time.": "Щоб зекономити час, візьми тонкий курячий шніцель з німецького супермаркету.",
+  "Quark is too wet; ricotta is worth buying for this dish.": "Quark занадто вологий; для цієї страви краще купити рикоту.",
+  "Frozen berries are reliable year-round in Germany.": "Заморожені ягоди в Німеччині стабільно добрі протягом року.",
+  "Passata works better than weak fresh tomatoes.": "Пасата працює краще, ніж несмачні свіжі помідори.",
+  "Use parsley, chives, basil, or whatever herbs look good.": "Використай петрушку, шніт-цибулю, базилік або будь-яку зелень, яка добре виглядає.",
+  "Jarred roasted peppers are reliable in Berlin when tomatoes are sad.": "Печений перець з банки в Берліні часто надійніший, коли помідори сумні.",
+  "Use canned tomatoes when fresh ones are weak.": "Використай консервовані томати, коли свіжі слабкі на смак.",
+  "Mie noodles from German supermarkets work well.": "Локшина mie з німецьких супермаркетів добре підходить.",
+  "Frozen broccoli is fine for practice.": "Заморожена броколі цілком підходить для практики.",
+  "Frozen green beans work if fresh ones look tired.": "Заморожена зелена квасоля підійде, якщо свіжа виглядає не дуже.",
+  "Leftover rice is best; fresh rice should cool uncovered first.": "Найкраще брати вчорашній рис; свіжий рис спочатку охолоди без кришки.",
+  "Use frozen white fish fillets, thawed and patted dry.": "Можна взяти заморожене філе білої риби, розморозити й обсушити.",
+  "Frozen mango is usually better than unripe fresh mango.": "Заморожене манго зазвичай краще, ніж недостигле свіже.",
+  "Use cashews if you do not have peanuts.": "Використай кеш'ю, якщо немає арахісу.",
+  "Asian markets in Berlin usually have doubanjiang.": "В азійських магазинах Берліна зазвичай є доубаньцзян.",
+  "This appears only when No oven is off.": "Це з'являється тільки тоді, коли вимкнено опцію «Без духовки».",
+  "Peanut butter is a practical sesame-paste substitute.": "Арахісова паста є практичною заміною кунжутної пасти.",
+  "Use white pepper if you have it.": "Використай білий перець, якщо він є.",
+  "Use peanut butter if black sesame paste is unavailable.": "Використай арахісову пасту, якщо немає пасти з чорного кунжуту.",
+  "Firm tofu from Asian markets or bio shops works best.": "Найкраще підходить твердий тофу з азійських магазинів або біомагазинів.",
+  "Use paprika if you do not have five-spice.": "Використай паприку, якщо немає суміші five-spice.",
+  "Frozen spinach works if squeezed dry first.": "Заморожений шпинат підійде, якщо спочатку добре відтиснути воду.",
+  "Chives and parsley are easy to find in Germany.": "Шніт-цибулю і петрушку легко знайти в Німеччині.",
+  "Emmentaler or Gruyere-style cheese works.": "Підійде Emmentaler або сир у стилі Gruyere.",
+  "Passata avoids depending on good fresh tomatoes.": "Пасата дозволяє не залежати від якісних свіжих помідорів.",
+  "Canned lentils make this very fast.": "Консервована сочевиця робить цю страву дуже швидкою.",
+  "Use cooking cream or Cremefine if that is what you have.": "Використай кулінарні вершки або Cremefine, якщо маєш саме їх.",
+  "Use Gouda or Emmentaler.": "Використай Gouda або Emmentaler.",
+  "Use 60-70% dark chocolate.": "Використай темний шоколад 60-70%.",
+  "Use stock if you do not want to cook with wine.": "Використай бульйон, якщо не хочеш готувати з вином.",
+  "Resting batter for 15 minutes helps if you have time.": "Якщо маєш час, дай тісту відпочити 15 хвилин.",
+  "This is a small learning version, not a full classic stew.": "Це маленька навчальна версія, не повне класичне рагу.",
+  "Canned tuna is easy to find and useful for high-protein weeks.": "Консервований тунець легко знайти, і він корисний для високобілкових тижнів.",
+  "Canned cannellini or butter beans work well.": "Консервована квасоля cannellini або butter beans добре підходить.",
+  "Magerquark or Greek yogurt are easy German substitutes.": "Magerquark або грецький йогурт легко знайти як німецькі заміни.",
+  "Use ordinary flour if buckwheat flour is unavailable.": "Використай звичайне борошно, якщо немає гречаного.",
+  "Canned chickpeas make this fast and high protein.": "Консервований нут робить цю страву швидкою і білковою."
+};
+
 const state = {
   cuisine: "italian",
   level: "beginner",
@@ -830,6 +933,16 @@ function translateCountIngredientName(name, quantity) {
   return translateIngredientName(name);
 }
 
+function displayTool(tool) {
+  if (state.language !== "uk") return tool;
+  return toolTranslations[tool] || tool;
+}
+
+function displayRecipeText(text) {
+  if (state.language !== "uk") return text;
+  return textTranslations[text] || text;
+}
+
 function quantityToken(text, amount) {
   const candidates = [
     String(amount),
@@ -1032,17 +1145,17 @@ function renderRecipe(dish) {
         </ul>
         <h3>${t("tools")}</h3>
         <ul class="list">
-          ${dish.tools.map((tool) => `<li>${tool}</li>`).join("")}
+          ${dish.tools.map((tool) => `<li>${displayTool(tool)}</li>`).join("")}
         </ul>
         <h3>${t("substitutions")}</h3>
         <ul class="list">
-          ${dish.substitutions.map((substitution) => `<li>${substitution}</li>`).join("")}
+          ${dish.substitutions.map((substitution) => `<li>${displayRecipeText(substitution)}</li>`).join("")}
         </ul>
       </div>
       <div class="step-block">
         <h3>${t("steps")}</h3>
         <ol class="steps">
-          ${dish.steps.map((step) => `<li>${step}</li>`).join("")}
+          ${dish.steps.map((step) => `<li>${displayRecipeText(step)}</li>`).join("")}
         </ol>
       </div>
     </div>
