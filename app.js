@@ -236,31 +236,70 @@ cuisines.italian.levels = {
   ]
 };
 
-cuisines.japanese.levels = {
-  beginner: cuisines.japanese.week,
-  intermediate: [
-    recipe("Katsudon", "Breaded cutlet timing and egg simmering", 45, "Medium", ["protein", "no oven"], [["meat", "150 g pork or chicken schnitzel", 150], ["dairy", "1 egg for coating plus 1 egg for simmering", 2], ["pantry", "30 g flour", 30], ["pantry", "50 g panko", 50], ["pantry", "80 g rice", 80], ["produce", "1/2 onion", 0.5], ["pantry", "soy sauce and sugar", 1]], ["pot", "frying pan", "shallow bowls", "knife"], ["Cook rice.", "Coat cutlet in flour, egg, and panko.", "Pan-fry until crisp and cooked.", "Simmer onion with soy, sugar, and water.", "Slice cutlet, add to pan, pour egg around it, and serve over rice."], ["German Schnitzel cuts make this easier."]),
-    recipe("Okonomiyaki", "Cabbage batter and controlled pan browning", 40, "Medium", ["vegetarian", "no oven"], [["produce", "180 g cabbage", 180], ["dairy", "1 egg", 1], ["pantry", "60 g flour", 60], ["pantry", "80 ml water or dashi", 80], ["pantry", "1 tbsp soy sauce", 1], ["dairy", "mayonnaise, optional", 1]], ["bowl", "frying pan", "spatula", "knife"], ["Shred cabbage finely.", "Mix flour, egg, water, and soy into a thick batter.", "Fold cabbage into batter.", "Cook as a thick pancake on medium heat until browned.", "Flip carefully and finish with sauce or mayonnaise."], ["Use ordinary cabbage from any supermarket."]),
-    recipe("Shoyu Ramen Shortcut", "Broth seasoning, noodle timing, and toppings", 45, "Medium", ["soup"], [["pasta", "120 g ramen or mie noodles", 120], ["pantry", "600 ml chicken or vegetable stock", 600], ["pantry", "1.5 tbsp soy sauce", 1.5], ["produce", "1 garlic clove", 1], ["produce", "1 tsp ginger", 1], ["dairy", "1 egg", 1], ["produce", "spring onion", 1]], ["saucepan", "pot", "knife"], ["Boil egg for 7 minutes and cool it.", "Simmer stock with garlic, ginger, and soy sauce.", "Cook noodles separately.", "Taste broth and adjust saltiness.", "Serve noodles with broth, egg, and spring onion."], ["Mie noodles are acceptable for a learning version."]),
-    recipe("Oyakodon", "Gentle egg setting in a rice bowl", 30, "Medium", ["protein", "no oven"], [["meat", "130 g chicken thigh or breast", 130], ["dairy", "2 eggs", 2], ["produce", "1/2 onion", 0.5], ["pantry", "80 g rice", 80], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1]], ["pot", "frying pan with lid", "bowl"], ["Cook rice.", "Simmer onion with soy, sugar, and water.", "Add small chicken pieces and cook through.", "Pour beaten egg over the chicken.", "Cover briefly so egg sets softly, then slide over rice."], ["Chicken thigh stays juicier, but breast works."]),
-    recipe("Agedashi-Style Tofu", "Crisping tofu and quick sauce", 35, "Medium", ["vegetarian", "no oven"], [["produce", "180 g firm tofu", 180], ["pantry", "2 tbsp cornstarch", 2], ["pantry", "1 tbsp soy sauce", 1], ["produce", "1 tsp grated ginger", 1], ["produce", "spring onion", 1], ["pantry", "oil for frying", 1]], ["paper towels", "frying pan", "small saucepan"], ["Press tofu between towels for 10 minutes.", "Cut and coat lightly in cornstarch.", "Pan-fry until crisp.", "Warm soy sauce, ginger, and a little water.", "Pour sauce around tofu and top with spring onion."], ["Firm tofu from Asian markets works best."]),
-    recipe("Soba with Mushroom Dipping Broth", "Noodle rinsing and concentrated broth", 30, "Medium", ["vegetarian", "no oven"], [["pasta", "100 g soba noodles", 100], ["produce", "120 g mushrooms", 120], ["pantry", "2 tbsp soy sauce", 2], ["pantry", "1 tsp sugar", 1], ["produce", "spring onion", 1]], ["pot", "saucepan", "colander", "knife"], ["Cook soba and rinse cold.", "Brown mushrooms in a small saucepan.", "Add soy sauce, sugar, and water to make a strong broth.", "Serve noodles cool with warm dipping broth.", "Top with spring onion."], ["Use buckwheat soba if available; wheat noodles still teach the flow."]),
-    recipe("Dorayaki", "Small pancakes and sweet filling", 35, "Medium", ["dessert", "vegetarian", "no oven"], [["dairy", "1 egg", 1], ["pantry", "45 g flour", 45], ["pantry", "1 tbsp sugar", 1], ["pantry", "1/2 tsp baking powder", 0.5], ["pantry", "60 g sweet red bean paste or jam", 60]], ["bowl", "whisk", "frying pan", "spatula"], ["Whisk egg and sugar.", "Add flour, baking powder, and a splash of water.", "Cook small pancakes on low-medium heat.", "Cool slightly.", "Sandwich with red bean paste or jam."], ["Jam is a practical stand-in if you cannot find anko."])
+cuisines.chinese = {
+  name: "Chinese",
+  palette: ["#b9372f", "#d9a441"],
+  alternatives: [
+    recipe("Tomato Egg Stir-Fry", "Soft eggs, quick sauce, and rice timing", 20, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["produce", "2 tomatoes or 180 g canned tomatoes", 2], ["produce", "1 spring onion", 1], ["pantry", "1 tsp soy sauce", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "bowl", "spatula"], ["Cook rice first.", "Beat eggs with a pinch of salt.", "Scramble eggs until just set, then remove.", "Cook tomatoes until saucy.", "Return eggs, add soy sauce, and finish with spring onion."], ["Use canned tomatoes when fresh ones are weak."]),
+    recipe("Garlic Green Beans", "High-heat vegetable blistering", 20, "Easy", ["vegetarian", "no oven"], [["produce", "180 g green beans", 180], ["produce", "2 garlic cloves", 2], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tsp sesame oil, optional", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "knife", "spatula"], ["Cook rice.", "Blanch or microwave beans briefly.", "Stir-fry beans in a hot pan until blistered.", "Add garlic for the last minute.", "Season with soy sauce and sesame oil."], ["Frozen green beans work if fresh ones look tired."]),
+    recipe("Scallion Oil Noodles", "Aromatic oil and noodle coating", 20, "Easy", ["vegetarian", "no oven"], [["pasta", "120 g wheat noodles", 120], ["produce", "3 spring onions", 3], ["pantry", "2 tbsp neutral oil", 2], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1]], ["pot", "small frying pan", "knife", "tongs"], ["Cook noodles and save a splash of noodle water.", "Slice spring onions.", "Cook spring onions slowly in oil until fragrant.", "Stir soy sauce and sugar into the oil.", "Toss noodles through the sauce."], ["Mie noodles from German supermarkets work well."])
   ]
 };
 
-cuisines.mexican.levels = {
-  beginner: cuisines.mexican.week,
+cuisines.chinese.levels = {
+  beginner: [
+    recipe("Tomato Egg Stir-Fry", "Soft eggs, quick sauce, and rice timing", 20, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["produce", "2 tomatoes or 180 g canned tomatoes", 2], ["produce", "1 spring onion", 1], ["pantry", "1 tsp soy sauce", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "bowl", "spatula"], ["Cook rice first.", "Beat eggs with a pinch of salt.", "Scramble eggs until just set, then remove.", "Cook tomatoes until saucy.", "Return eggs, add soy sauce, and finish with spring onion."], ["Use canned tomatoes when fresh ones are weak."]),
+    recipe("Scallion Oil Noodles", "Aromatic oil and noodle coating", 20, "Easy", ["vegetarian", "no oven"], [["pasta", "120 g wheat noodles", 120], ["produce", "3 spring onions", 3], ["pantry", "2 tbsp neutral oil", 2], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1]], ["pot", "small frying pan", "knife", "tongs"], ["Cook noodles and save a splash of noodle water.", "Slice spring onions.", "Cook spring onions slowly in oil until fragrant.", "Stir soy sauce and sugar into the oil.", "Toss noodles through the sauce."], ["Mie noodles from German supermarkets work well."]),
+    recipe("Chicken and Broccoli Stir-Fry", "Velveting shortcut and fast pan sauce", 30, "Easy", ["protein", "no oven"], [["meat", "150 g chicken breast", 150], ["produce", "180 g broccoli", 180], ["produce", "1 garlic clove", 1], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp cornstarch", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "knife", "bowl"], ["Cook rice.", "Slice chicken and mix with soy sauce and cornstarch.", "Blanch or steam broccoli briefly.", "Stir-fry chicken until cooked.", "Add broccoli, garlic, and a splash of water to finish."], ["Frozen broccoli is fine for practice."]),
+    recipe("Garlic Green Beans", "High-heat vegetable blistering", 20, "Easy", ["vegetarian", "no oven"], [["produce", "180 g green beans", 180], ["produce", "2 garlic cloves", 2], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tsp sesame oil, optional", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "knife", "spatula"], ["Cook rice.", "Blanch or microwave beans briefly.", "Stir-fry beans in a hot pan until blistered.", "Add garlic for the last minute.", "Season with soy sauce and sesame oil."], ["Frozen green beans work if fresh ones look tired."]),
+    recipe("Egg Fried Rice", "Dry rice, hot pan, and seasoning", 25, "Easy", ["vegetarian", "no oven"], [["pantry", "160 g cooked rice", 160], ["dairy", "2 eggs", 2], ["frozen", "80 g peas or mixed vegetables", 80], ["produce", "1 spring onion", 1], ["pantry", "1.5 tbsp soy sauce", 1.5]], ["wok or frying pan", "spatula", "bowl"], ["Use cold cooked rice if possible.", "Scramble eggs and remove them.", "Stir-fry vegetables and rice in a hot pan.", "Return eggs and season with soy sauce.", "Finish with spring onion."], ["Leftover rice is best; fresh rice should cool uncovered first."]),
+    recipe("Steamed Fish with Ginger", "Gentle steaming and hot aromatic oil", 25, "Easy", ["protein", "no oven"], [["meat", "150 g white fish fillet", 150], ["produce", "1 tsp ginger", 1], ["produce", "1 spring onion", 1], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tbsp neutral oil", 1], ["pantry", "80 g rice", 80]], ["pot with steamer or covered pan", "small pan", "knife"], ["Cook rice.", "Steam fish with ginger until just cooked.", "Top with spring onion.", "Warm oil until shimmering.", "Pour oil over the fish and season with soy sauce."], ["Use frozen white fish fillets, thawed and patted dry."]),
+    recipe("Mango Sago-Style Pudding", "Chilled dessert texture and fruit puree", 20, "Easy", ["dessert", "vegetarian", "no oven"], [["produce", "1 mango or 150 g frozen mango", 1], ["dairy", "120 ml coconut milk", 120], ["pantry", "1 tbsp sugar", 1], ["pantry", "25 g small tapioca pearls or pudding rice", 25]], ["small pot", "blender or fork", "glass"], ["Cook tapioca pearls or pudding rice until tender.", "Blend mango with coconut milk and sugar.", "Stir in cooked pearls.", "Chill until cold.", "Serve in a glass."], ["Frozen mango is usually better than unripe fresh mango."])
+  ],
   intermediate: [
-    recipe("Chilaquiles Verdes Shortcut", "Sauce simmering and keeping tortilla texture", 35, "Medium", ["vegetarian", "no oven"], [["bakery", "60 g tortilla chips", 60], ["pantry", "200 g salsa verde", 200], ["dairy", "1 egg", 1], ["dairy", "40 g feta or sour cream", 40], ["produce", "1 lime", 1], ["produce", "coriander or parsley", 1]], ["frying pan", "small saucepan", "spatula"], ["Warm salsa verde in a pan.", "Fold in tortilla chips briefly so some edges stay crisp.", "Fry an egg.", "Top chips with egg, feta or sour cream, herbs, and lime.", "Eat immediately."], ["Jarred salsa verde from a Mexican shop makes this weeknight-friendly."]),
-    recipe("Chicken Mole-Inspired Bowl", "Layered sauce with spices and chocolate", 50, "Medium", ["protein", "no oven"], [["meat", "160 g chicken", 160], ["pantry", "200 g passata", 200], ["pantry", "1 tsp cocoa powder", 1], ["pantry", "1 tsp peanut butter", 1], ["pantry", "chili powder", 1], ["pantry", "80 g rice", 80], ["produce", "1/2 onion", 0.5]], ["pot", "saucepan", "knife", "forks"], ["Cook rice.", "Simmer chicken until cooked and shred it.", "Cook onion, then add passata, cocoa, peanut butter, chili, and salt.", "Simmer until the sauce tastes rounded.", "Stir in chicken and serve over rice."], ["This is a learning-friendly mole-inspired sauce, not traditional mole."]),
-    recipe("Tostadas with Refried Beans", "Bean texture and crisp assembly", 30, "Medium", ["vegetarian", "no oven"], [["bakery", "2 tortillas", 2], ["pantry", "220 g canned beans", 220], ["produce", "1/2 onion", 0.5], ["dairy", "40 g feta or sour cream", 40], ["produce", "1 lime", 1], ["produce", "cabbage or lettuce", 1]], ["frying pan", "fork", "knife"], ["Toast tortillas in a dry pan until crisp.", "Cook onion, add beans, and mash with a splash of water.", "Season beans with salt and lime.", "Spread beans on tostadas.", "Top with cabbage and cheese or sour cream."], ["Kidney beans work if black or pinto beans are unavailable."]),
-    recipe("Enchiladas Rojas Skillet", "Sauce coating and pan assembly", 45, "Medium", ["vegetarian", "no oven"], [["bakery", "3 tortillas", 3], ["pantry", "250 g passata", 250], ["pantry", "150 g canned beans", 150], ["dairy", "80 g grated cheese", 80], ["produce", "1/2 onion", 0.5], ["pantry", "chili powder", 1]], ["frying pan with lid", "small saucepan", "spatula"], ["Simmer passata with onion, chili, and salt into a sauce.", "Fill tortillas with beans and a little cheese.", "Roll and place in a pan.", "Cover with sauce and remaining cheese.", "Cover until hot and melted."], ["Use Gouda if Mexican cheese is unavailable."]),
-    recipe("Calabacitas", "Vegetable saute and sweetness-acid balance", 30, "Medium", ["vegetarian", "no oven"], [["produce", "1 zucchini", 1], ["frozen", "100 g corn", 100], ["produce", "1/2 onion", 0.5], ["pantry", "100 g passata", 100], ["dairy", "30 g feta", 30], ["produce", "1/2 lime", 0.5]], ["frying pan", "knife", "spatula"], ["Cook onion until soft.", "Add zucchini and corn and saute until browned in spots.", "Add passata and simmer briefly.", "Season with salt and lime.", "Finish with crumbled feta."], ["A good way to practice vegetables without needing special ingredients."]),
-    recipe("Arroz con Pollo-ish", "One-pot rice and protein timing", 45, "Medium", ["protein", "no oven"], [["meat", "150 g chicken", 150], ["pantry", "90 g rice", 90], ["pantry", "250 ml stock", 250], ["produce", "1/2 onion", 0.5], ["produce", "1 garlic clove", 1], ["pantry", "100 g passata", 100], ["frozen", "80 g peas or corn", 80]], ["wide pot with lid", "knife", "spatula"], ["Brown seasoned chicken pieces.", "Cook onion and garlic in the same pot.", "Add rice, passata, stock, and vegetables.", "Nestle chicken back in.", "Cover and cook gently until rice is done."], ["Use boneless chicken for a faster learning version."]),
-    recipe("Cajeta-Style Yogurt Dessert", "Caramel notes and dessert layering", 20, "Medium", ["dessert", "vegetarian", "no oven"], [["dairy", "150 g Greek yogurt", 150], ["pantry", "1 tbsp dulce de leche or caramel", 1], ["bakery", "1 biscuit or cookie", 1], ["pantry", "cinnamon", 1], ["produce", "banana or berries, optional", 1]], ["glass", "spoon", "small bowl"], ["Crush biscuit into a glass.", "Mix yogurt with a little cinnamon.", "Layer yogurt and caramel.", "Add fruit if using.", "Chill briefly or eat right away."], ["Dulce de leche is sometimes in Latin shops; caramel spread also works."])
+    recipe("Kung Pao Chicken", "Marinade, sauce staging, and wok timing", 40, "Medium", ["protein", "no oven"], [["meat", "160 g chicken thigh or breast", 160], ["produce", "1 bell pepper", 1], ["produce", "2 garlic cloves", 2], ["produce", "1 tsp ginger", 1], ["pantry", "2 tbsp soy sauce", 2], ["pantry", "1 tbsp vinegar", 1], ["pantry", "20 g peanuts", 20], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "bowl", "knife"], ["Cook rice.", "Marinate diced chicken with soy sauce and cornstarch.", "Mix soy sauce, vinegar, sugar, and water for sauce.", "Stir-fry chicken, then aromatics and pepper.", "Add sauce and peanuts, tossing until glossy."], ["Use cashews if you do not have peanuts."]),
+    recipe("Mapo Tofu Shortcut", "Chili bean sauce and fragile tofu handling", 35, "Medium", ["no oven"], [["produce", "200 g tofu", 200], ["meat", "80 g minced pork or mushrooms", 80], ["pantry", "1 tbsp doubanjiang or chili bean sauce", 1], ["produce", "1 garlic clove", 1], ["produce", "1 tsp ginger", 1], ["pantry", "1 tsp cornstarch", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "spatula"], ["Cook rice.", "Brown pork or mushrooms.", "Add garlic, ginger, and chili bean sauce.", "Add tofu cubes and a splash of water.", "Thicken gently with cornstarch slurry."], ["Asian markets in Berlin usually have doubanjiang."]),
+    recipe("Char Siu-Style Oven Pork", "Marinade glazing and oven roasting", 55, "Medium", ["protein", "oven"], [["meat", "180 g pork shoulder or tenderloin", 180], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tbsp honey", 1], ["pantry", "1 tsp five-spice", 1], ["produce", "1 garlic clove", 1], ["pantry", "80 g rice", 80]], ["oven", "baking tray", "bowl", "brush"], ["Mix soy sauce, honey, five-spice, and garlic.", "Marinate pork for at least 20 minutes.", "Roast at 200 C, brushing with glaze.", "Rest before slicing.", "Serve with rice."], ["This appears only when No oven is off."]),
+    recipe("Dan Dan Noodles Shortcut", "Layered spicy sauce and noodle water", 35, "Medium", ["no oven"], [["pasta", "120 g wheat noodles", 120], ["meat", "90 g minced pork or mushrooms", 90], ["pantry", "1 tbsp peanut butter or sesame paste", 1], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "chili oil", 1], ["produce", "spring onion", 1]], ["pot", "frying pan", "bowl"], ["Brown pork or mushrooms.", "Mix peanut butter, soy sauce, chili oil, and noodle water.", "Cook noodles.", "Toss noodles with sauce.", "Top with browned topping and spring onion."], ["Peanut butter is a practical sesame-paste substitute."]),
+    recipe("Hot and Sour Soup", "Balancing acid, heat, and thickening", 35, "Medium", ["soup", "no oven"], [["produce", "80 g tofu", 80], ["produce", "80 g mushrooms", 80], ["dairy", "1 egg", 1], ["pantry", "500 ml stock", 500], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tbsp vinegar", 1], ["pantry", "1 tsp cornstarch", 1]], ["saucepan", "bowl", "whisk"], ["Simmer stock with mushrooms and tofu.", "Season with soy sauce and vinegar.", "Thicken lightly with cornstarch slurry.", "Drizzle in beaten egg while stirring gently.", "Adjust with more vinegar or pepper."], ["Use white pepper if you have it."]),
+    recipe("Chinese-Style Baked Eggplant", "Oven roasting and savory garlic sauce", 45, "Medium", ["vegetarian", "oven"], [["produce", "1 eggplant", 1], ["produce", "2 garlic cloves", 2], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1], ["pantry", "1 tsp vinegar", 1], ["pantry", "80 g rice", 80]], ["oven", "baking tray", "small bowl", "pot"], ["Roast halved eggplant at 210 C until soft.", "Cook rice.", "Mix garlic, soy sauce, sugar, and vinegar.", "Spoon sauce over roasted eggplant.", "Serve with rice."], ["This appears only when No oven is off."]),
+    recipe("Sesame Tangyuan-Style Rice Balls", "Sticky dough and sweet filling", 45, "Medium", ["dessert", "vegetarian", "no oven"], [["pantry", "80 g glutinous rice flour", 80], ["pantry", "50 ml warm water", 50], ["pantry", "1 tbsp black sesame or peanut butter", 1], ["pantry", "1 tbsp sugar", 1]], ["bowl", "pot", "spoon"], ["Mix flour and warm water into a soft dough.", "Mix sesame or peanut butter with sugar.", "Wrap small portions of filling in dough.", "Boil until floating.", "Serve warm with a little cooking water."], ["Use peanut butter if black sesame paste is unavailable."])
   ]
 };
+
+cuisines.french = {
+  name: "French",
+  palette: ["#2f5f8f", "#d9b46a"],
+  alternatives: [
+    recipe("Omelette aux Fines Herbes", "Soft egg curds and folding", 15, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["dairy", "1 tsp butter", 1], ["produce", "fresh herbs or chives", 1], ["pantry", "salt and black pepper", 1]], ["bowl", "fork", "small frying pan", "spatula"], ["Beat eggs with salt and herbs.", "Melt butter without browning.", "Cook eggs gently, stirring small curds.", "Fold while still soft.", "Serve immediately."], ["Chives and parsley are easy to find in Germany."]),
+    recipe("Lentil Salad with Mustard", "Acid, mustard, and legume texture", 30, "Easy", ["vegetarian", "no oven"], [["pantry", "120 g cooked lentils", 120], ["produce", "1/2 carrot", 0.5], ["produce", "1/4 onion", 0.25], ["pantry", "1 tsp Dijon mustard", 1], ["pantry", "1 tbsp vinegar", 1], ["pantry", "1 tbsp olive oil", 1]], ["small pot", "bowl", "knife"], ["Cook carrot until just tender if using raw.", "Mix mustard, vinegar, oil, salt, and pepper.", "Toss lentils with dressing.", "Add carrot and onion.", "Rest 5 minutes before eating."], ["Canned lentils make this very fast."]),
+    recipe("Croque Madame Skillet", "Toast, cheese melt, and fried egg timing", 20, "Easy", ["no oven"], [["bakery", "2 slices bread", 2], ["meat", "1 slice ham", 1], ["dairy", "50 g grated cheese", 50], ["dairy", "1 egg", 1], ["dairy", "1 tsp butter", 1]], ["frying pan", "spatula"], ["Build a ham and cheese sandwich.", "Toast it in butter until golden and melted.", "Fry an egg.", "Place egg on top.", "Season with pepper."], ["Use Gouda or Emmentaler."])
+  ]
+};
+
+cuisines.french.levels = {
+  beginner: [
+    recipe("Omelette aux Fines Herbes", "Soft egg curds and folding", 15, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["dairy", "1 tsp butter", 1], ["produce", "fresh herbs or chives", 1], ["pantry", "salt and black pepper", 1]], ["bowl", "fork", "small frying pan", "spatula"], ["Beat eggs with salt and herbs.", "Melt butter without browning.", "Cook eggs gently, stirring small curds.", "Fold while still soft.", "Serve immediately."], ["Chives and parsley are easy to find in Germany."]),
+    recipe("French Onion Toast", "Slow onions and cheese melting without soup", 30, "Easy", ["vegetarian", "no oven"], [["produce", "1 onion", 1], ["bakery", "1 thick slice bread", 1], ["dairy", "40 g grated cheese", 40], ["dairy", "1 tsp butter", 1], ["pantry", "1 tsp vinegar", 1]], ["frying pan", "knife", "spatula"], ["Slice onion thinly.", "Cook slowly with butter and salt until soft and golden.", "Add a tiny splash of vinegar.", "Toast bread in the pan.", "Top with onions and cheese until melted."], ["Emmentaler or Gruyere-style cheese works."]),
+    recipe("Ratatouille Skillet", "Vegetable sequencing and gentle stewing", 40, "Easy", ["vegetarian", "no oven"], [["produce", "1 small zucchini", 1], ["produce", "1/2 eggplant", 0.5], ["produce", "1 bell pepper", 1], ["pantry", "200 g passata", 200], ["produce", "1 garlic clove", 1], ["pantry", "1 tbsp olive oil", 1]], ["large frying pan", "knife", "spatula"], ["Cut vegetables into similar pieces.", "Brown eggplant first, then remove.", "Cook zucchini and pepper.", "Add garlic, passata, and eggplant.", "Simmer until tender and glossy."], ["Passata avoids depending on good fresh tomatoes."]),
+    recipe("Lentil Salad with Mustard", "Acid, mustard, and legume texture", 30, "Easy", ["vegetarian", "no oven"], [["pantry", "120 g cooked lentils", 120], ["produce", "1/2 carrot", 0.5], ["produce", "1/4 onion", 0.25], ["pantry", "1 tsp Dijon mustard", 1], ["pantry", "1 tbsp vinegar", 1], ["pantry", "1 tbsp olive oil", 1]], ["small pot", "bowl", "knife"], ["Cook carrot until just tender if using raw.", "Mix mustard, vinegar, oil, salt, and pepper.", "Toss lentils with dressing.", "Add carrot and onion.", "Rest 5 minutes before eating."], ["Canned lentils make this very fast."]),
+    recipe("Chicken Dijon", "Pan sauce with mustard and cream", 30, "Easy", ["protein", "no oven"], [["meat", "150 g chicken breast or thigh", 150], ["pantry", "1 tsp Dijon mustard", 1], ["dairy", "60 ml cream", 60], ["produce", "1/2 shallot or onion", 0.5], ["dairy", "1 tsp butter", 1]], ["frying pan", "knife", "tongs"], ["Season and brown chicken.", "Remove chicken and cook shallot.", "Add a splash of water, mustard, and cream.", "Return chicken and simmer until cooked.", "Taste and adjust salt."], ["Use cooking cream or Cremefine if that is what you have."]),
+    recipe("Croque Madame Skillet", "Toast, cheese melt, and fried egg timing", 20, "Easy", ["no oven"], [["bakery", "2 slices bread", 2], ["meat", "1 slice ham", 1], ["dairy", "50 g grated cheese", 50], ["dairy", "1 egg", 1], ["dairy", "1 tsp butter", 1]], ["frying pan", "spatula"], ["Build a ham and cheese sandwich.", "Toast it in butter until golden and melted.", "Fry an egg.", "Place egg on top.", "Season with pepper."], ["Use Gouda or Emmentaler."]),
+    recipe("Chocolate Mousse Shortcut", "Folding cream and chilled texture", 20, "Easy", ["dessert", "vegetarian", "no oven"], [["dairy", "100 ml whipping cream", 100], ["pantry", "50 g dark chocolate", 50], ["pantry", "1 tsp sugar, optional", 1]], ["bowl", "small saucepan or microwave", "whisk"], ["Melt chocolate gently and cool slightly.", "Whip cream to soft peaks.", "Fold a little cream into chocolate.", "Fold in the rest gently.", "Chill for at least 1 hour."], ["Use 60-70% dark chocolate."])
+  ],
+  intermediate: [
+    recipe("Quiche Lorraine", "Shortcrust filling and custard baking", 65, "Medium", ["oven"], [["bakery", "1 small ready-made shortcrust pastry", 1], ["meat", "80 g bacon or lardons", 80], ["dairy", "2 eggs", 2], ["dairy", "120 ml cream", 120], ["dairy", "60 g grated cheese", 60]], ["oven", "small tart dish", "frying pan", "bowl"], ["Blind bake pastry if the package suggests it.", "Cook bacon until lightly crisp.", "Whisk eggs, cream, cheese, pepper, and a little salt.", "Fill pastry with bacon and custard.", "Bake at 180 C until set."], ["This appears only when No oven is off."]),
+    recipe("Coq au Vin Shortcut", "Braising and sauce reduction", 55, "Medium", ["protein", "no oven"], [["meat", "180 g chicken thigh", 180], ["produce", "120 g mushrooms", 120], ["produce", "1/2 onion", 0.5], ["produce", "1 carrot", 1], ["pantry", "150 ml red wine or stock", 150], ["dairy", "1 tsp butter", 1]], ["heavy pot", "knife", "tongs"], ["Brown chicken and remove.", "Cook onion, carrot, and mushrooms.", "Add wine or stock and scrape the pan.", "Return chicken and simmer covered.", "Reduce sauce until glossy."], ["Use stock if you do not want to cook with wine."]),
+    recipe("Salmon en Papillote", "Packet steaming and fish doneness", 35, "Medium", ["protein", "oven"], [["meat", "160 g salmon fillet", 160], ["produce", "1/2 zucchini", 0.5], ["produce", "1/2 lemon", 0.5], ["dairy", "1 tsp butter", 1], ["produce", "herbs, optional", 1]], ["oven", "baking paper", "knife", "baking tray"], ["Slice zucchini thinly.", "Place salmon and zucchini on baking paper.", "Add lemon, butter, salt, and herbs.", "Seal into a packet.", "Bake at 190 C until fish is just cooked."], ["This appears only when No oven is off."]),
+    recipe("Mushroom Crepes", "Thin batter and savory filling", 50, "Medium", ["vegetarian", "no oven"], [["dairy", "1 egg", 1], ["dairy", "120 ml milk", 120], ["pantry", "50 g flour", 50], ["produce", "150 g mushrooms", 150], ["dairy", "50 ml cream", 50], ["dairy", "1 tsp butter", 1]], ["bowl", "whisk", "frying pan"], ["Whisk egg, milk, flour, and salt into a thin batter.", "Cook thin crepes and stack them.", "Cook mushrooms until browned.", "Add cream and reduce.", "Fill crepes with mushrooms."], ["Resting batter for 15 minutes helps if you have time."]),
+    recipe("Beef Bourguignon-ish Bowl", "Browning and slow stovetop braising", 70, "Medium", ["protein", "no oven"], [["meat", "180 g beef stew meat", 180], ["produce", "120 g mushrooms", 120], ["produce", "1 carrot", 1], ["produce", "1/2 onion", 0.5], ["pantry", "180 ml red wine or stock", 180], ["pantry", "1 tsp flour", 1]], ["heavy pot", "knife", "wooden spoon"], ["Brown beef well.", "Cook onion, carrot, and mushrooms.", "Stir in flour.", "Add wine or stock and scrape the pot.", "Simmer gently until tender."], ["This is a small learning version, not a full classic stew."]),
+    recipe("Potato Gratin", "Layering, cream absorption, and oven browning", 60, "Medium", ["vegetarian", "oven"], [["produce", "250 g potatoes", 250], ["dairy", "120 ml cream", 120], ["dairy", "50 ml milk", 50], ["produce", "1 garlic clove", 1], ["dairy", "40 g grated cheese", 40]], ["oven", "small baking dish", "knife"], ["Slice potatoes thinly.", "Warm cream, milk, garlic, salt, and pepper.", "Layer potatoes in a small dish.", "Pour cream over and top with cheese.", "Bake at 180 C until tender and browned."], ["This appears only when No oven is off."]),
+    recipe("Creme Caramel Shortcut", "Custard setting and caramel", 70, "Medium", ["dessert", "vegetarian", "oven"], [["dairy", "1 egg", 1], ["dairy", "120 ml milk", 120], ["pantry", "2 tbsp sugar", 2], ["pantry", "vanilla, optional", 1]], ["oven", "small ramekin", "small saucepan", "baking dish"], ["Make a small caramel with half the sugar and pour into a ramekin.", "Whisk egg, milk, remaining sugar, and vanilla.", "Pour custard over caramel.", "Bake in a water bath at 160 C.", "Chill before serving."], ["This appears only when No oven is off."])
+  ]
+};
+
+delete cuisines.japanese;
+delete cuisines.mexican;
 
 const categories = {
   produce: "Produce",
@@ -278,6 +317,7 @@ const state = {
   servings: 1,
   vegetarian: false,
   noOven: true,
+  highProtein: false,
   selectedDay: 0,
   view: "plan",
   progress: JSON.parse(localStorage.getItem("cuisineCoachProgress") || "{}"),
@@ -289,13 +329,14 @@ const levelSelect = document.querySelector("#level-select");
 const servingsInput = document.querySelector("#servings-input");
 const vegetarianInput = document.querySelector("#vegetarian-input");
 const noOvenInput = document.querySelector("#no-oven-input");
+const highProteinInput = document.querySelector("#high-protein-input");
 const dayRail = document.querySelector("#day-rail");
 const recipePanel = document.querySelector("#recipe-panel");
 const programTitle = document.querySelector("#program-title");
 const shoppingList = document.querySelector("#shopping-list");
 const progressList = document.querySelector("#progress-list");
 
-Object.entries(cuisines).forEach(([key, cuisine]) => {
+Object.entries(cuisines).filter(([, cuisine]) => Boolean(cuisine)).forEach(([key, cuisine]) => {
   const option = document.createElement("option");
   option.value = key;
   option.textContent = cuisine.name;
@@ -303,9 +344,11 @@ Object.entries(cuisines).forEach(([key, cuisine]) => {
 });
 
 function getWeek() {
-  const base = getBaseWeek().map((dish) => {
-    if (!state.vegetarian || isVegetarianDish(dish)) return dish;
-    return getCandidates().find((candidate) => isVegetarianDish(candidate)) || dish;
+  const used = new Set();
+  const base = getBaseWeek().map((dish, index) => {
+    const chosen = isAllowedDish(dish) ? dish : pickReplacement(index, used) || dish;
+    used.add(chosen.name);
+    return chosen;
   });
 
   return base.map((dish, dayIndex) => {
@@ -317,11 +360,29 @@ function getWeek() {
 
 function getCandidates() {
   const cuisine = cuisines[state.cuisine];
-  return [...getBaseWeek(), ...(cuisine.alternatives || [])].filter((dish) => {
-    if (state.vegetarian && !isVegetarianDish(dish)) return false;
-    if (state.noOven && dish.tags.includes("oven")) return false;
+  return uniqueDishes([...getBaseWeek(), ...(cuisine.alternatives || [])]).filter(isAllowedDish);
+}
+
+function pickReplacement(dayIndex, used) {
+  const fresh = getCandidates().filter((dish) => !used.has(dish.name));
+  const pool = fresh.length ? fresh : getCandidates();
+  return pool[dayIndex % pool.length];
+}
+
+function uniqueDishes(dishes) {
+  const seen = new Set();
+  return dishes.filter((dish) => {
+    if (seen.has(dish.name)) return false;
+    seen.add(dish.name);
     return true;
   });
+}
+
+function isAllowedDish(dish) {
+  if (state.vegetarian && !isVegetarianDish(dish)) return false;
+  if (state.noOven && dish.tags.includes("oven")) return false;
+  if (state.highProtein && !isHighProteinDish(dish)) return false;
+  return true;
 }
 
 function getBaseWeek() {
@@ -334,6 +395,12 @@ function isVegetarianDish(dish) {
   return !dish.ingredients.some(([category]) => category === "meat");
 }
 
+function isHighProteinDish(dish) {
+  if (dish.tags.includes("protein")) return true;
+  const text = dish.ingredients.map((ingredient) => ingredient[1].toLowerCase()).join(" ");
+  return /egg|tofu|beans|lentils|chicken|fish|salmon|beef|pork|ham|bacon|ricotta|yogurt|greek yogurt/.test(text);
+}
+
 function swapKey(dayIndex) {
   return `${state.cuisine}-${state.level}-${dayIndex}`;
 }
@@ -344,8 +411,31 @@ function progressKey(dayIndex) {
 
 function scaledText(text, amount) {
   if (typeof amount !== "number" || state.servings === 1) return text;
-  const scaled = Number((amount * state.servings).toFixed(1));
-  return text.replace(String(amount), String(scaled));
+  const scaled = formatQuantity(amount * state.servings);
+  const original = quantityToken(text, amount);
+  return original ? text.replace(original, scaled) : `${text} x ${state.servings}`;
+}
+
+function quantityToken(text, amount) {
+  const candidates = [
+    String(amount),
+    amount === 0.25 ? "1/4" : "",
+    amount === 0.5 ? "1/2" : "",
+    amount === 1.5 ? "1.5" : "",
+    amount === 2.5 ? "2.5" : ""
+  ].filter(Boolean);
+  return candidates.find((candidate) => text.includes(candidate));
+}
+
+function formatQuantity(value) {
+  const rounded = Math.round(value * 4) / 4;
+  if (Number.isInteger(rounded)) return String(rounded);
+  if (rounded === 0.25) return "1/4";
+  if (rounded === 0.5) return "1/2";
+  if (rounded === 0.75) return "3/4";
+  if (rounded === 1.5) return "1 1/2";
+  if (rounded === 2.5) return "2 1/2";
+  return String(Number(rounded.toFixed(2)));
 }
 
 function render() {
@@ -737,6 +827,13 @@ vegetarianInput.addEventListener("change", (event) => {
 
 noOvenInput.addEventListener("change", (event) => {
   state.noOven = event.target.checked;
+  state.selectedDay = 0;
+  render();
+});
+
+highProteinInput.addEventListener("change", (event) => {
+  state.highProtein = event.target.checked;
+  state.selectedDay = 0;
   render();
 });
 
