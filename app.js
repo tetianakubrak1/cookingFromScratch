@@ -368,6 +368,7 @@ const translations = {
     photoComingSoon: "Photo coming soon",
     photo: "photo",
     cuisineNames: { italian: "Italian", chinese: "Chinese", french: "French" },
+    programTitle: "{cuisine} {level} Week",
     categories
   },
   uk: {
@@ -378,8 +379,8 @@ const translations = {
     constraints: "Обмеження",
     vegetarian: "Вегетаріанське",
     noOven: "Без духовки",
-    highProtein: "Більше білка",
-    germanyMode: "Режим Німеччини",
+    highProtein: "Високобілкове",
+    germanyMode: "Режим для Німеччини",
     germanyModeText: "Плани враховують інгредієнти, які легко знайти в Rewe, Edeka, Aldi, Lidl, азійських магазинах, турецьких магазинах або італійських делі в Берліні.",
     pathEyebrow: "7-денний кулінарний шлях",
     plan: "План",
@@ -389,23 +390,24 @@ const translations = {
     shoppingList: "Список покупок",
     copyList: "Скопіювати",
     copied: "Скопійовано",
-    selectList: "Виділіть список",
+    selectList: "Вибрати список",
     yourNotes: "Ваші нотатки",
     cookingProgress: "Кулінарний прогрес",
     reset: "Скинути",
     beginner: "Початковий",
     intermediate: "Середній",
     week: "тиждень",
+    programTitle: "{cuisine} кухня · {level} рівень",
     day: "День",
     min: "хв",
     serving: "порція",
     servingsWord: "порції",
-    cooked: "Приготовано",
-    markCooked: "Позначити готовим",
+    cooked: "Готово",
+    markCooked: "Позначити як готове",
     surpriseMe: "Змінити страву",
     chooseAnotherDish: "Вибрати іншу страву",
     ingredients: "Інгредієнти",
-    tools: "Інструменти",
+    tools: "Кухонне приладдя",
     substitutions: "Заміни в Берліні",
     steps: "Кроки",
     difficultyRating: "Оцінка складності",
@@ -414,7 +416,7 @@ const translations = {
     ok: "Нормально",
     hard: "Складно",
     medium: "Середньо",
-    photoComingSoon: "Фото скоро буде",
+    photoComingSoon: "Фото страви",
     photo: "фото",
     cuisineNames: { italian: "Італійська", chinese: "Китайська", french: "Французька" },
     categories: {
@@ -616,7 +618,9 @@ function render() {
   applyLanguage();
   document.documentElement.style.setProperty("--art-a", cuisine.palette[0]);
   document.documentElement.style.setProperty("--art-b", cuisine.palette[1]);
-  programTitle.textContent = `${t(`cuisineNames.${state.cuisine}`)} ${t(state.level)} ${t("week")}`;
+  programTitle.textContent = t("programTitle")
+    .replace("{cuisine}", t(`cuisineNames.${state.cuisine}`))
+    .replace("{level}", t(state.level));
   renderDays(week);
   renderRecipe(selected);
   renderShopping(week);
@@ -853,39 +857,84 @@ function showPhotoPlaceholder(image, dishName) {
 
 function dishPhoto(dish) {
   const photos = {
-    "Spaghetti Aglio e Olio": ["Spaghetti aglio e olio KB.jpg", "Wikimedia Commons"],
-    "Cacio e Pepe": ["Cacio e pepe.jpg", "Wikimedia Commons"],
-    "Pasta al Pomodoro": ["Pasta al pomodoro.JPG", "Wikimedia Commons"],
-    "Risotto ai Funghi": ["Risotto ai funghi porcini.JPG", "Wikimedia Commons"],
-    "Scaloppine al Limone": ["Scaloppine al limone.jpg", "Wikimedia Commons"],
-    "Gnocchi with Sage Butter": ["Zuni ricotta gnocchi with browned butter and sage.jpg", "Wikimedia Commons"],
-    "Tiramisu Cup": ["Tiramisu in a cup, July 2007.jpg", "Wikimedia Commons"],
-    "Penne all'Arrabbiata": ["Penne all'arrabbiata.jpg", "Wikimedia Commons"],
-    "Frittata alle Erbe": ["Frittata.jpg", "Wikimedia Commons"],
-    "Panzanella with Roasted Peppers": ["Panzanella.jpg", "Wikimedia Commons"],
-    "Onigiri": ["Onigiri.JPG", "Wikimedia Commons"],
-    "Miso Soup": ["Miso Soup 001.jpg", "Wikimedia Commons"],
-    "Chicken Teriyaki": ["Teriyaki Chicken (3284699052).jpg", "Wikimedia Commons"],
-    "Yakisoba": ["Yakisoba.jpg", "Wikimedia Commons"],
-    "Tamago Sando": ["Egg Sandwich 001.jpg", "Wikimedia Commons"],
-    "Gyoza Bowl": ["Gyoza (5930315588).jpg", "Wikimedia Commons"],
-    "Quesadilla": ["Cheese quesadilla.jpg", "Wikimedia Commons"],
-    "Pico-Free Bean Tacos": ["Roasted sweet potato + black bean tacos (7784822910).jpg", "Wikimedia Commons"],
-    "Sopa de Fideo": ["Sopa de fideo.jpg", "Wikimedia Commons"],
-    "Chicken Tinga": ["Tinga.jpg", "Wikimedia Commons"],
-    "Elote Bowl": ["Elote con crema y queso cotija.jpg", "Wikimedia Commons"],
-    "Churro-Style Toast": ["Cinnamon toast - 01.jpg", "Wikimedia Commons"],
-    "Mushroom Tacos": ["Tacos, rice, and beans.jpg", "Wikimedia Commons"],
-    "Huevos Rancheros-ish": ["Huevos rancheros 01.jpg", "Wikimedia Commons"]
+    "Spaghetti Aglio e Olio": filePhoto("Spaghetti aglio e olio KB.jpg"),
+    "Cacio e Pepe": filePhoto("Cacio e pepe.jpg"),
+    "Pasta al Pomodoro": filePhoto("Pasta al pomodoro.JPG"),
+    "Risotto ai Funghi": filePhoto("Risotto ai funghi porcini.JPG"),
+    "Scaloppine al Limone": filePhoto("Scaloppine al limone.jpg"),
+    "Gnocchi with Sage Butter": filePhoto("Zuni ricotta gnocchi with browned butter and sage.jpg"),
+    "Tiramisu Cup": filePhoto("Tiramisu in a cup, July 2007.jpg"),
+    "Pasta alla Norma": directPhoto("Pasta alla Norma (2563876877).jpg", "https://upload.wikimedia.org/wikipedia/commons/3/3f/Pasta_alla_Norma_%282563876877%29.jpg"),
+    "Carbonara": directPhoto("Espaguetis carbonara.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/960px-Espaguetis_carbonara.jpg"),
+    "Minestrone": directPhoto("Minestrone soup.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Minestrone_soup.jpg/960px-Minestrone_soup.jpg"),
+    "Mushroom Risotto with Dried Porcini": directPhoto("Mushroom Risotto (4789418371).jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Mushroom_Risotto_%284789418371%29.jpg/960px-Mushroom_Risotto_%284789418371%29.jpg"),
+    "Saltimbocca-Style Chicken": directPhoto("Saltimbocca-2.jpg", "https://upload.wikimedia.org/wikipedia/commons/b/ba/Saltimbocca-2.jpg"),
+    "Handmade Ricotta Gnocchi": directPhoto("Gnocchi di ricotta burro e salvia.jpg", "https://upload.wikimedia.org/wikipedia/commons/8/86/Gnocchi_di_ricotta_burro_e_salvia.jpg"),
+    "Panna Cotta with Berry Sauce": directPhoto("Panna Cotta with cream and garnish.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Panna_Cotta_with_cream_and_garnish.jpg/960px-Panna_Cotta_with_cream_and_garnish.jpg"),
+    "Penne all'Arrabbiata": filePhoto("Penne all'arrabbiata.jpg"),
+    "Frittata alle Erbe": filePhoto("Frittata.jpg"),
+    "Panzanella with Roasted Peppers": filePhoto("Panzanella.jpg"),
+    "Tomato Egg Stir-Fry": directPhoto("Stir Fried Tomatoes with Scrambled Eggs.jpg", "https://upload.wikimedia.org/wikipedia/commons/1/19/Stir_Fried_Tomatoes_with_Scrambled_Eggs.jpg"),
+    "Garlic Green Beans": directPhoto("Stir fry.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Stir_fry.jpg/960px-Stir_fry.jpg"),
+    "Scallion Oil Noodles": directPhoto("Shanghai oil noodle.jpg", "https://upload.wikimedia.org/wikipedia/commons/5/5b/Shanghai_oil_noodle.jpg"),
+    "Tofu Mushroom Stir-Fry": directPhoto("Stir fry.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Stir_fry.jpg/960px-Stir_fry.jpg"),
+    "Sesame Cucumber Noodles": directPhoto("Cold Sesame Noodles, shredded chicken, pickled cucumbers, crispy garlic, crushed peanuts, scallions, sesame dressing, chicken broth, yu choy (31967905702).jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Cold_Sesame_Noodles%2C_shredded_chicken%2C_pickled_cucumbers%2C_crispy_garlic%2C_crushed_peanuts%2C_scallions%2C_sesame_dressing%2C_chicken_broth%2C_yu_choy_%2831967905702%29.jpg/960px-Cold_Sesame_Noodles%2C_shredded_chicken%2C_pickled_cucumbers%2C_crispy_garlic%2C_crushed_peanuts%2C_scallions%2C_sesame_dressing%2C_chicken_broth%2C_yu_choy_%2831967905702%29.jpg"),
+    "Five-Spice Chickpeas": directPhoto("Stir fry.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Stir_fry.jpg/960px-Stir_fry.jpg"),
+    "Spinach Egg Drop Soup": directPhoto("Egg drop soup.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Egg_drop_soup.jpg/960px-Egg_drop_soup.jpg"),
+    "Chicken and Broccoli Stir-Fry": directPhoto("Ginger chicken (3168342551).jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ginger_chicken_%283168342551%29.jpg/960px-Ginger_chicken_%283168342551%29.jpg"),
+    "Egg Fried Rice": directPhoto("Fried rice with chicken and egg.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Fried_rice_with_chicken_and_egg.jpg/960px-Fried_rice_with_chicken_and_egg.jpg"),
+    "Steamed Fish with Ginger": directPhoto("HK food dinner streamed fish July-2012.JPG", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/HK_food_dinner_streamed_fish_July-2012.JPG/960px-HK_food_dinner_streamed_fish_July-2012.JPG"),
+    "Mango Sago-Style Pudding": directPhoto("Mango pomelo sago.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Mango_pomelo_sago.jpg/960px-Mango_pomelo_sago.jpg"),
+    "Kung Pao Chicken": directPhoto("Kung Pao Chicken at Liqiaoshun Restaurant (20220310175424).jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Kung_Pao_Chicken_at_Liqiaoshun_Restaurant_%2820220310175424%29.jpg/960px-Kung_Pao_Chicken_at_Liqiaoshun_Restaurant_%2820220310175424%29.jpg"),
+    "Mapo Tofu Shortcut": directPhoto("Billyfoodmabodofu3.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Billyfoodmabodofu3.jpg/960px-Billyfoodmabodofu3.jpg"),
+    "Char Siu-Style Oven Pork": directPhoto("Charsiu.jpg", "https://upload.wikimedia.org/wikipedia/commons/9/95/Charsiu.jpg"),
+    "Dan Dan Noodles Shortcut": filePhoto("Dan Dan Noodles.jpg"),
+    "Hot and Sour Soup": filePhoto("Hot-and-Sour-Soup-Bowl.jpg"),
+    "Chinese-Style Baked Eggplant": filePhoto("Yuxiang Eggplant (13974518993).jpg"),
+    "Sesame Tangyuan-Style Rice Balls": filePhoto("Tangyuan.JPG"),
+    "Omelette aux Fines Herbes": filePhoto("Omelette.JPG"),
+    "Lentil Salad with Mustard": filePhoto("Lentil salad (29308018298).jpg"),
+    "Croque Madame Skillet": filePhoto("Croque madame.jpg"),
+    "Tuna Nicoise-ish Salad": filePhoto("Salade nicoise.jpg"),
+    "White Bean Herb Salad": filePhoto("White bean mediterranean salad.jpg"),
+    "Fromage Blanc Protein Bowl": filePhoto("Fromage blanc.jpg"),
+    "Buckwheat Crepe with Egg": filePhoto("Galette complète in Annecy, France - 20130714.jpg"),
+    "Chickpea Dijon Salad": filePhoto("Colorful healthy Chickpea Salad - 49859083608.jpg"),
+    "French Onion Toast": filePhoto("Woodsoup.jpg"),
+    "Ratatouille Skillet": filePhoto("Ratatouille.JPG"),
+    "Chicken Dijon": filePhoto("-2019-03-06 Creamy mustard chicken with broccoli.JPG"),
+    "Chocolate Mousse Shortcut": filePhoto("Chocolate mousse.jpg"),
+    "Quiche Lorraine": filePhoto("Quiche lorraine.jpg"),
+    "Coq au Vin Shortcut": filePhoto("Coq au vin.jpg"),
+    "Salmon en Papillote": filePhoto("Salmon baked in an oven with lemons.jpg"),
+    "Mushroom Crepes": filePhoto("Crêpe Creole and Spanish Tortilla + Salad - Pure Brunch Box 2023-07-29.jpg"),
+    "Beef Bourguignon-ish Bowl": filePhoto("Boeuf Bourguignon.JPG"),
+    "Potato Gratin": filePhoto("Gratin dauphinois.jpg"),
+    "Creme Caramel Shortcut": filePhoto("Crème au caramel 1.jpg")
   };
   const photo = photos[dish.name];
   if (!photo) return null;
-  const fileName = photo[0];
+  return photo;
+}
+
+function filePhoto(fileName) {
   return {
     url: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=900`,
-    source: `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(fileName).replaceAll("%20", "_")}`,
-    credit: photo[1]
+    source: commonsFileSource(fileName),
+    credit: "Wikimedia Commons"
   };
+}
+
+function directPhoto(fileName, url) {
+  return {
+    url,
+    source: commonsFileSource(fileName),
+    credit: "Wikimedia Commons"
+  };
+}
+
+function commonsFileSource(fileName) {
+  return `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(fileName).replaceAll("%20", "_")}`;
 }
 
 function hashString(value) {
