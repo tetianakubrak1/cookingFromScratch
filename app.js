@@ -242,7 +242,11 @@ cuisines.chinese = {
   alternatives: [
     recipe("Tomato Egg Stir-Fry", "Soft eggs, quick sauce, and rice timing", 20, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["produce", "2 tomatoes or 180 g canned tomatoes", 2], ["produce", "1 spring onion", 1], ["pantry", "1 tsp soy sauce", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "bowl", "spatula"], ["Cook rice first.", "Beat eggs with a pinch of salt.", "Scramble eggs until just set, then remove.", "Cook tomatoes until saucy.", "Return eggs, add soy sauce, and finish with spring onion."], ["Use canned tomatoes when fresh ones are weak."]),
     recipe("Garlic Green Beans", "High-heat vegetable blistering", 20, "Easy", ["vegetarian", "no oven"], [["produce", "180 g green beans", 180], ["produce", "2 garlic cloves", 2], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tsp sesame oil, optional", 1], ["pantry", "80 g rice", 80]], ["pot", "wok or frying pan", "knife", "spatula"], ["Cook rice.", "Blanch or microwave beans briefly.", "Stir-fry beans in a hot pan until blistered.", "Add garlic for the last minute.", "Season with soy sauce and sesame oil."], ["Frozen green beans work if fresh ones look tired."]),
-    recipe("Scallion Oil Noodles", "Aromatic oil and noodle coating", 20, "Easy", ["vegetarian", "no oven"], [["pasta", "120 g wheat noodles", 120], ["produce", "3 spring onions", 3], ["pantry", "2 tbsp neutral oil", 2], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1]], ["pot", "small frying pan", "knife", "tongs"], ["Cook noodles and save a splash of noodle water.", "Slice spring onions.", "Cook spring onions slowly in oil until fragrant.", "Stir soy sauce and sugar into the oil.", "Toss noodles through the sauce."], ["Mie noodles from German supermarkets work well."])
+    recipe("Scallion Oil Noodles", "Aromatic oil and noodle coating", 20, "Easy", ["vegetarian", "no oven"], [["pasta", "120 g wheat noodles", 120], ["produce", "3 spring onions", 3], ["pantry", "2 tbsp neutral oil", 2], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1]], ["pot", "small frying pan", "knife", "tongs"], ["Cook noodles and save a splash of noodle water.", "Slice spring onions.", "Cook spring onions slowly in oil until fragrant.", "Stir soy sauce and sugar into the oil.", "Toss noodles through the sauce."], ["Mie noodles from German supermarkets work well."]),
+    recipe("Tofu Mushroom Stir-Fry", "Browning tofu and mushrooms without crowding", 25, "Easy", ["vegetarian", "protein", "no oven"], [["produce", "180 g firm tofu", 180], ["produce", "120 g mushrooms", 120], ["produce", "1 garlic clove", 1], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp cornstarch", 1], ["pantry", "80 g rice", 80]], ["pot", "frying pan", "knife", "spatula"], ["Cook rice.", "Pat tofu dry and cube it.", "Brown tofu in a hot pan, then remove.", "Brown mushrooms, then add garlic.", "Return tofu and season with soy sauce."], ["Firm tofu from Asian markets or bio shops works best."]),
+    recipe("Sesame Cucumber Noodles", "Cold noodle rinsing and sesame dressing", 20, "Easy", ["vegetarian", "no oven"], [["pasta", "120 g wheat noodles", 120], ["produce", "1/2 cucumber", 0.5], ["pantry", "1 tbsp peanut butter or sesame paste", 1], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tsp vinegar", 1]], ["pot", "colander", "bowl", "knife"], ["Cook noodles and rinse cold.", "Mix peanut butter or sesame paste with soy sauce, vinegar, and water.", "Slice cucumber thinly.", "Toss noodles with dressing.", "Top with cucumber."], ["Peanut butter is a practical sesame-paste substitute."]),
+    recipe("Five-Spice Chickpeas", "Pan-crisp legumes and spice blooming", 20, "Easy", ["vegetarian", "protein", "no oven"], [["pantry", "180 g canned chickpeas", 180], ["pantry", "1 tsp five-spice or paprika", 1], ["produce", "1 spring onion", 1], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "80 g rice", 80]], ["pot", "frying pan", "spatula"], ["Cook rice.", "Dry chickpeas well.", "Pan-crisp chickpeas in a little oil.", "Add spice and soy sauce.", "Finish with spring onion."], ["Use paprika if you do not have five-spice."]),
+    recipe("Spinach Egg Drop Soup", "Ribboned egg and fast broth seasoning", 20, "Easy", ["vegetarian", "protein", "soup", "no oven"], [["dairy", "2 eggs", 2], ["produce", "80 g spinach", 80], ["pantry", "500 ml vegetable stock", 500], ["pantry", "1 tbsp soy sauce", 1], ["pantry", "1 tsp cornstarch, optional", 1]], ["saucepan", "bowl", "whisk"], ["Simmer stock with soy sauce.", "Add spinach until wilted.", "Thicken lightly with cornstarch if using.", "Drizzle beaten eggs into the simmering soup.", "Serve hot."], ["Frozen spinach works if squeezed dry first."])
   ]
 };
 
@@ -273,7 +277,12 @@ cuisines.french = {
   alternatives: [
     recipe("Omelette aux Fines Herbes", "Soft egg curds and folding", 15, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["dairy", "1 tsp butter", 1], ["produce", "fresh herbs or chives", 1], ["pantry", "salt and black pepper", 1]], ["bowl", "fork", "small frying pan", "spatula"], ["Beat eggs with salt and herbs.", "Melt butter without browning.", "Cook eggs gently, stirring small curds.", "Fold while still soft.", "Serve immediately."], ["Chives and parsley are easy to find in Germany."]),
     recipe("Lentil Salad with Mustard", "Acid, mustard, and legume texture", 30, "Easy", ["vegetarian", "no oven"], [["pantry", "120 g cooked lentils", 120], ["produce", "1/2 carrot", 0.5], ["produce", "1/4 onion", 0.25], ["pantry", "1 tsp Dijon mustard", 1], ["pantry", "1 tbsp vinegar", 1], ["pantry", "1 tbsp olive oil", 1]], ["small pot", "bowl", "knife"], ["Cook carrot until just tender if using raw.", "Mix mustard, vinegar, oil, salt, and pepper.", "Toss lentils with dressing.", "Add carrot and onion.", "Rest 5 minutes before eating."], ["Canned lentils make this very fast."]),
-    recipe("Croque Madame Skillet", "Toast, cheese melt, and fried egg timing", 20, "Easy", ["no oven"], [["bakery", "2 slices bread", 2], ["meat", "1 slice ham", 1], ["dairy", "50 g grated cheese", 50], ["dairy", "1 egg", 1], ["dairy", "1 tsp butter", 1]], ["frying pan", "spatula"], ["Build a ham and cheese sandwich.", "Toast it in butter until golden and melted.", "Fry an egg.", "Place egg on top.", "Season with pepper."], ["Use Gouda or Emmentaler."])
+    recipe("Croque Madame Skillet", "Toast, cheese melt, and fried egg timing", 20, "Easy", ["no oven"], [["bakery", "2 slices bread", 2], ["meat", "1 slice ham", 1], ["dairy", "50 g grated cheese", 50], ["dairy", "1 egg", 1], ["dairy", "1 tsp butter", 1]], ["frying pan", "spatula"], ["Build a ham and cheese sandwich.", "Toast it in butter until golden and melted.", "Fry an egg.", "Place egg on top.", "Season with pepper."], ["Use Gouda or Emmentaler."]),
+    recipe("Tuna Nicoise-ish Salad", "Protein salad assembly and mustard vinaigrette", 20, "Easy", ["protein", "no oven"], [["meat", "1 small can tuna", 1], ["dairy", "1 egg", 1], ["produce", "120 g green beans or lettuce", 120], ["produce", "1/2 potato, optional", 0.5], ["pantry", "1 tsp Dijon mustard", 1], ["pantry", "1 tbsp vinegar", 1]], ["small pot", "bowl", "knife"], ["Boil egg and potato if using.", "Cook or blanch green beans briefly.", "Whisk mustard, vinegar, olive oil, salt, and pepper.", "Arrange tuna, egg, vegetables, and dressing.", "Serve at room temperature."], ["Canned tuna is easy to find and useful for high-protein weeks."]),
+    recipe("White Bean Herb Salad", "Bean protein, herbs, and sharp dressing", 15, "Easy", ["vegetarian", "protein", "no oven"], [["pantry", "180 g canned white beans", 180], ["produce", "fresh herbs or parsley", 1], ["produce", "1/4 onion", 0.25], ["pantry", "1 tsp Dijon mustard", 1], ["pantry", "1 tbsp vinegar", 1], ["pantry", "1 tbsp olive oil", 1]], ["bowl", "knife", "fork"], ["Rinse beans well.", "Whisk mustard, vinegar, olive oil, salt, and pepper.", "Slice onion very thinly.", "Toss beans, onion, herbs, and dressing.", "Rest for 5 minutes before eating."], ["Canned cannellini or butter beans work well."]),
+    recipe("Fromage Blanc Protein Bowl", "No-cook dairy bowl with fruit and crunch", 10, "Easy", ["vegetarian", "protein", "dessert", "no oven"], [["dairy", "200 g fromage blanc or Greek yogurt", 200], ["produce", "100 g berries or apple", 100], ["pantry", "1 tbsp nuts", 1], ["pantry", "1 tsp honey, optional", 1]], ["bowl", "spoon", "knife"], ["Spoon fromage blanc or yogurt into a bowl.", "Add fruit.", "Top with nuts.", "Add honey if you want it sweeter.", "Eat chilled."], ["Magerquark or Greek yogurt are easy German substitutes."]),
+    recipe("Buckwheat Crepe with Egg", "Thin crepe batter and egg setting", 30, "Medium", ["vegetarian", "protein", "no oven"], [["dairy", "1 egg for batter plus 1 egg for filling", 2], ["pantry", "45 g buckwheat or wheat flour", 45], ["dairy", "90 ml milk or water", 90], ["dairy", "30 g grated cheese", 30], ["dairy", "1 tsp butter", 1]], ["bowl", "whisk", "frying pan", "spatula"], ["Whisk flour, one egg, milk or water, and salt into a thin batter.", "Cook one large thin crepe.", "Add cheese and crack an egg into the center.", "Fold edges inward.", "Cook until the egg is set to your liking."], ["Use ordinary flour if buckwheat flour is unavailable."]),
+    recipe("Chickpea Dijon Salad", "No-cook legumes with a sharp French dressing", 15, "Easy", ["vegetarian", "protein", "no oven"], [["pantry", "180 g canned chickpeas", 180], ["produce", "1/2 cucumber or carrot", 0.5], ["produce", "fresh parsley", 1], ["pantry", "1 tsp Dijon mustard", 1], ["pantry", "1 tbsp vinegar", 1], ["pantry", "1 tbsp olive oil", 1]], ["bowl", "knife", "fork"], ["Rinse chickpeas.", "Whisk mustard, vinegar, olive oil, salt, and pepper.", "Dice cucumber or carrot.", "Toss everything with parsley.", "Rest for 5 minutes before eating."], ["Canned chickpeas make this fast and high protein."])
   ]
 };
 
@@ -311,6 +320,115 @@ const categories = {
   frozen: "Frozen"
 };
 
+const translations = {
+  en: {
+    language: "Language",
+    cuisine: "Cuisine",
+    level: "Level",
+    servings: "Servings",
+    constraints: "Constraints",
+    vegetarian: "Vegetarian",
+    noOven: "No oven",
+    highProtein: "High protein",
+    germanyMode: "Germany Mode",
+    germanyModeText: "Plans prefer ingredients found at Rewe, Edeka, Aldi, Lidl, Asian markets, Turkish markets, or Italian delis in Berlin.",
+    pathEyebrow: "7-day cooking path",
+    plan: "Plan",
+    shopping: "Shopping",
+    progress: "Progress",
+    wholeWeek: "For the whole week",
+    shoppingList: "Shopping List",
+    copyList: "Copy list",
+    copied: "Copied",
+    selectList: "Select list",
+    yourNotes: "Your notes",
+    cookingProgress: "Cooking Progress",
+    reset: "Reset",
+    beginner: "Beginner",
+    intermediate: "Intermediate",
+    week: "Week",
+    day: "Day",
+    min: "min",
+    serving: "serving",
+    servingsWord: "servings",
+    cooked: "Cooked",
+    markCooked: "Mark cooked",
+    surpriseMe: "Surprise me",
+    chooseAnotherDish: "Choose another dish",
+    ingredients: "Ingredients",
+    tools: "Tools",
+    substitutions: "Berlin substitutions",
+    steps: "Steps",
+    difficultyRating: "Difficulty rating",
+    notesPlaceholder: "Notes for next time",
+    easy: "Easy",
+    ok: "Ok",
+    hard: "Hard",
+    medium: "Medium",
+    photoComingSoon: "Photo coming soon",
+    photo: "photo",
+    cuisineNames: { italian: "Italian", chinese: "Chinese", french: "French" },
+    categories
+  },
+  uk: {
+    language: "Мова",
+    cuisine: "Кухня",
+    level: "Рівень",
+    servings: "Порції",
+    constraints: "Обмеження",
+    vegetarian: "Вегетаріанське",
+    noOven: "Без духовки",
+    highProtein: "Більше білка",
+    germanyMode: "Режим Німеччини",
+    germanyModeText: "Плани враховують інгредієнти, які легко знайти в Rewe, Edeka, Aldi, Lidl, азійських магазинах, турецьких магазинах або італійських делі в Берліні.",
+    pathEyebrow: "7-денний кулінарний шлях",
+    plan: "План",
+    shopping: "Покупки",
+    progress: "Прогрес",
+    wholeWeek: "На весь тиждень",
+    shoppingList: "Список покупок",
+    copyList: "Скопіювати",
+    copied: "Скопійовано",
+    selectList: "Виділіть список",
+    yourNotes: "Ваші нотатки",
+    cookingProgress: "Кулінарний прогрес",
+    reset: "Скинути",
+    beginner: "Початковий",
+    intermediate: "Середній",
+    week: "тиждень",
+    day: "День",
+    min: "хв",
+    serving: "порція",
+    servingsWord: "порції",
+    cooked: "Приготовано",
+    markCooked: "Позначити готовим",
+    surpriseMe: "Змінити страву",
+    chooseAnotherDish: "Вибрати іншу страву",
+    ingredients: "Інгредієнти",
+    tools: "Інструменти",
+    substitutions: "Заміни в Берліні",
+    steps: "Кроки",
+    difficultyRating: "Оцінка складності",
+    notesPlaceholder: "Нотатки на наступний раз",
+    easy: "Легко",
+    ok: "Нормально",
+    hard: "Складно",
+    medium: "Середньо",
+    photoComingSoon: "Фото скоро буде",
+    photo: "фото",
+    cuisineNames: { italian: "Італійська", chinese: "Китайська", french: "Французька" },
+    categories: {
+      produce: "Овочі та зелень",
+      pantry: "Бакалія",
+      pasta: "Паста, рис, хліб",
+      bakery: "Паста, рис, хліб",
+      dairy: "Молочні продукти",
+      meat: "М'ясо та риба",
+      frozen: "Заморожене"
+    }
+  }
+};
+
 const state = {
   cuisine: "italian",
   level: "beginner",
@@ -318,12 +436,14 @@ const state = {
   vegetarian: false,
   noOven: true,
   highProtein: false,
+  language: localStorage.getItem("cuisineCoachLanguage") || "en",
   selectedDay: 0,
   view: "plan",
   progress: JSON.parse(localStorage.getItem("cuisineCoachProgress") || "{}"),
   swaps: JSON.parse(localStorage.getItem("cuisineCoachSwaps") || "{}")
 };
 
+const languageSelect = document.querySelector("#language-select");
 const cuisineSelect = document.querySelector("#cuisine-select");
 const levelSelect = document.querySelector("#level-select");
 const servingsInput = document.querySelector("#servings-input");
@@ -336,12 +456,31 @@ const programTitle = document.querySelector("#program-title");
 const shoppingList = document.querySelector("#shopping-list");
 const progressList = document.querySelector("#progress-list");
 
-Object.entries(cuisines).filter(([, cuisine]) => Boolean(cuisine)).forEach(([key, cuisine]) => {
-  const option = document.createElement("option");
-  option.value = key;
-  option.textContent = cuisine.name;
-  cuisineSelect.append(option);
-});
+function populateCuisineOptions() {
+  cuisineSelect.replaceChildren();
+  Object.entries(cuisines).filter(([, cuisine]) => Boolean(cuisine)).forEach(([key, cuisine]) => {
+    const option = document.createElement("option");
+    option.value = key;
+    option.textContent = t(`cuisineNames.${key}`) || cuisine.name;
+    cuisineSelect.append(option);
+  });
+  cuisineSelect.value = state.cuisine;
+}
+
+function applyLanguage() {
+  document.documentElement.lang = state.language === "uk" ? "uk" : "en";
+  languageSelect.value = state.language;
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    element.textContent = t(element.dataset.i18n);
+  });
+  levelSelect.querySelector('[value="beginner"]').textContent = t("beginner");
+  levelSelect.querySelector('[value="intermediate"]').textContent = t("intermediate");
+  populateCuisineOptions();
+}
+
+function t(key) {
+  return key.split(".").reduce((value, part) => value?.[part], translations[state.language]) ?? key;
+}
 
 function getWeek() {
   const used = new Set();
@@ -351,11 +490,14 @@ function getWeek() {
     return chosen;
   });
 
-  return base.map((dish, dayIndex) => {
+  const withSwaps = base.map((dish, dayIndex) => {
     const swappedName = state.swaps[swapKey(dayIndex)];
     if (!swappedName) return dish;
+    const duplicateElsewhere = base.some((candidate, index) => index !== dayIndex && candidate.name === swappedName);
+    if (duplicateElsewhere) return dish;
     return getCandidates().find((candidate) => candidate.name === swappedName) || dish;
   });
+  return dedupeWeek(withSwaps);
 }
 
 function getCandidates() {
@@ -363,10 +505,39 @@ function getCandidates() {
   return uniqueDishes([...getBaseWeek(), ...(cuisine.alternatives || [])]).filter(isAllowedDish);
 }
 
+function getSwapCandidates() {
+  const currentDish = getWeek()[state.selectedDay];
+  const used = new Set(getWeek().map((dish, index) => index === state.selectedDay ? "" : dish.name));
+  return getCandidates().filter((dish) => dish.name === currentDish.name || !used.has(dish.name));
+}
+
 function pickReplacement(dayIndex, used) {
-  const fresh = getCandidates().filter((dish) => !used.has(dish.name));
-  const pool = fresh.length ? fresh : getCandidates();
-  return pool[dayIndex % pool.length];
+  const candidates = getCandidates();
+  const fresh = candidates.filter((dish) => !used.has(dish.name));
+  if (fresh.length) return fresh[dayIndex % fresh.length];
+  return getRelaxedCandidates().find((dish) => !used.has(dish.name));
+}
+
+function dedupeWeek(week) {
+  const used = new Set();
+  return week.map((dish, index) => {
+    if (!used.has(dish.name)) {
+      used.add(dish.name);
+      return dish;
+    }
+    const replacement = pickReplacement(index, used) || dish;
+    used.add(replacement.name);
+    return replacement;
+  });
+}
+
+function getRelaxedCandidates() {
+  const cuisine = cuisines[state.cuisine];
+  return uniqueDishes([...getBaseWeek(), ...(cuisine.alternatives || [])]).filter((dish) => {
+    if (state.vegetarian && !isVegetarianDish(dish)) return false;
+    if (state.noOven && dish.tags.includes("oven")) return false;
+    return true;
+  });
 }
 
 function uniqueDishes(dishes) {
@@ -442,9 +613,10 @@ function render() {
   const cuisine = cuisines[state.cuisine];
   const week = getWeek();
   const selected = week[state.selectedDay];
+  applyLanguage();
   document.documentElement.style.setProperty("--art-a", cuisine.palette[0]);
   document.documentElement.style.setProperty("--art-b", cuisine.palette[1]);
-  programTitle.textContent = `${cuisine.name} ${capitalize(state.level)} Week`;
+  programTitle.textContent = `${t(`cuisineNames.${state.cuisine}`)} ${t(state.level)} ${t("week")}`;
   renderDays(week);
   renderRecipe(selected);
   renderShopping(week);
@@ -458,7 +630,7 @@ function renderDays(week) {
     button.type = "button";
     button.className = `day-card ${index === state.selectedDay ? "active" : ""} ${state.progress[progressKey(index)]?.done ? "done" : ""}`;
     button.innerHTML = `
-      <span class="day-meta"><span>Day ${index + 1}</span><span>${dish.time} min</span></span>
+      <span class="day-meta"><span>${t("day")} ${index + 1}</span><span>${dish.time} ${t("min")}</span></span>
       <strong>${dish.name}</strong>
       <small>${dish.skill}</small>
     `;
@@ -474,26 +646,26 @@ function renderDays(week) {
 function renderRecipe(dish) {
   const key = progressKey(state.selectedDay);
   const done = Boolean(state.progress[key]?.done);
-  const candidates = getCandidates();
+  const candidates = getSwapCandidates();
   const photo = dishPhoto(dish);
   recipePanel.innerHTML = `
     <div class="recipe-hero">
       <div class="recipe-title">
-        <p class="eyebrow">Day ${state.selectedDay + 1}</p>
+        <p class="eyebrow">${t("day")} ${state.selectedDay + 1}</p>
         <h2>${dish.name}</h2>
         <p class="muted">${dish.skill}</p>
         <div class="pill-row">
-          <span class="pill">${dish.time} min</span>
-          <span class="pill">${dish.difficulty}</span>
-          <span class="pill">${state.servings} serving${state.servings > 1 ? "s" : ""}</span>
+          <span class="pill">${dish.time} ${t("min")}</span>
+          <span class="pill">${t(dish.difficulty.toLowerCase())}</span>
+          <span class="pill">${state.servings} ${state.servings > 1 ? t("servingsWord") : t("serving")}</span>
         </div>
         <div class="recipe-actions">
-          <button class="complete-button ${done ? "done" : ""}" type="button" id="complete-day">${done ? "Cooked" : "Mark cooked"}</button>
-          <button class="ghost-button" type="button" id="surprise-dish">Surprise me</button>
+          <button class="complete-button ${done ? "done" : ""}" type="button" id="complete-day">${done ? t("cooked") : t("markCooked")}</button>
+          <button class="ghost-button" type="button" id="surprise-dish">${t("surpriseMe")}</button>
         </div>
         <label class="swap-control" for="dish-swap-select">
-          <span>Choose another dish</span>
-          <select id="dish-swap-select" aria-label="Choose another dish">
+          <span>${t("chooseAnotherDish")}</span>
+          <select id="dish-swap-select" aria-label="${t("chooseAnotherDish")}">
             ${candidates.map((candidate) => `<option value="${escapeAttribute(candidate.name)}" ${candidate.name === dish.name ? "selected" : ""}>${candidate.name}</option>`).join("")}
           </select>
         </label>
@@ -501,27 +673,27 @@ function renderRecipe(dish) {
       <figure class="dish-photo-wrap ${photo ? "" : "needs-photo"}">
         ${photo ? `<img class="dish-photo" src="${photo.url}" alt="${dish.name}" loading="lazy" onerror="showPhotoPlaceholder(this, '${escapeAttribute(dish.name)}');">` : photoPlaceholderMarkup(dish)}
         <figcaption>
-          ${photo ? `<a href="${photo.source}" target="_blank" rel="noreferrer">${dish.name} photo</a>` : `Photo coming soon`}
+          ${photo ? `<a href="${photo.source}" target="_blank" rel="noreferrer">${dish.name} ${t("photo")}</a>` : t("photoComingSoon")}
         </figcaption>
       </figure>
     </div>
     <div class="recipe-body">
       <div class="info-block">
-        <h3>Ingredients</h3>
+        <h3>${t("ingredients")}</h3>
         <ul class="list">
           ${dish.ingredients.map((item) => `<li>${scaledText(item[1], item[2])}</li>`).join("")}
         </ul>
-        <h3>Tools</h3>
+        <h3>${t("tools")}</h3>
         <ul class="list">
           ${dish.tools.map((tool) => `<li>${tool}</li>`).join("")}
         </ul>
-        <h3>Berlin substitutions</h3>
+        <h3>${t("substitutions")}</h3>
         <ul class="list">
           ${dish.substitutions.map((substitution) => `<li>${substitution}</li>`).join("")}
         </ul>
       </div>
       <div class="step-block">
-        <h3>Steps</h3>
+        <h3>${t("steps")}</h3>
         <ol class="steps">
           ${dish.steps.map((step) => `<li>${step}</li>`).join("")}
         </ol>
@@ -551,7 +723,7 @@ function renderShopping(week) {
   const grouped = {};
   week.forEach((dish) => {
     dish.ingredients.forEach(([category, text, amount]) => {
-      const label = categories[category] || "Other";
+      const label = t(`categories.${category}`) || category;
       grouped[label] ||= [];
       grouped[label].push(scaledText(text, amount));
     });
@@ -578,17 +750,17 @@ function renderProgress(week) {
     card.className = "progress-card";
     card.innerHTML = `
       <div>
-        <p class="eyebrow">Day ${index + 1}</p>
+        <p class="eyebrow">${t("day")} ${index + 1}</p>
         <h3>${dish.name}</h3>
       </div>
       <label class="check-row">
         <input type="checkbox" ${entry.done ? "checked" : ""} data-progress="${key}" data-field="done">
-        <span>Cooked</span>
+        <span>${t("cooked")}</span>
       </label>
-      <div class="progress-actions" role="group" aria-label="Difficulty rating">
-        ${["easy", "ok", "hard"].map((rating) => `<button class="rating-button ${entry.rating === rating ? "active" : ""}" type="button" data-rating="${rating}" data-key="${key}">${capitalize(rating)}</button>`).join("")}
+      <div class="progress-actions" role="group" aria-label="${t("difficultyRating")}">
+        ${["easy", "ok", "hard"].map((rating) => `<button class="rating-button ${entry.rating === rating ? "active" : ""}" type="button" data-rating="${rating}" data-key="${key}">${t(rating)}</button>`).join("")}
       </div>
-      <textarea placeholder="Notes for next time" data-note="${key}">${entry.note || ""}</textarea>
+      <textarea placeholder="${t("notesPlaceholder")}" data-note="${key}">${entry.note || ""}</textarea>
     `;
     progressList.append(card);
   });
@@ -654,10 +826,10 @@ function generatedDishImageUrl(dish) {
 
 function photoPlaceholderMarkup(dish) {
   return `
-    <div class="photo-placeholder" role="img" aria-label="Photo coming soon for ${escapeAttribute(dish.name)}">
+    <div class="photo-placeholder" role="img" aria-label="${t("photoComingSoon")} ${escapeAttribute(dish.name)}">
       <img class="dish-photo" src="${generatedDishImageUrl(dish)}" alt="" aria-hidden="true">
       <div class="photo-placeholder-copy">
-        <span>Photo coming soon</span>
+        <span>${t("photoComingSoon")}</span>
         <strong>${dish.name}</strong>
       </div>
     </div>
@@ -667,12 +839,12 @@ function photoPlaceholderMarkup(dish) {
 function showPhotoPlaceholder(image, dishName) {
   const wrapper = image.closest(".dish-photo-wrap");
   wrapper.classList.add("needs-photo");
-  wrapper.querySelector("figcaption").textContent = "Photo coming soon";
+  wrapper.querySelector("figcaption").textContent = t("photoComingSoon");
   image.outerHTML = `
-    <div class="photo-placeholder" role="img" aria-label="Photo coming soon for ${dishName}">
+    <div class="photo-placeholder" role="img" aria-label="${t("photoComingSoon")} ${dishName}">
       <img class="dish-photo" src="${generatedDishImageUrl({ name: dishName, ingredients: [] })}" alt="" aria-hidden="true">
       <div class="photo-placeholder-copy">
-        <span>Photo coming soon</span>
+        <span>${t("photoComingSoon")}</span>
         <strong>${dishName}</strong>
       </div>
     </div>
@@ -803,6 +975,12 @@ document.querySelectorAll(".tab-button").forEach((button) => {
   button.addEventListener("click", () => switchView(button.dataset.view));
 });
 
+languageSelect.addEventListener("change", (event) => {
+  state.language = event.target.value;
+  localStorage.setItem("cuisineCoachLanguage", state.language);
+  render();
+});
+
 cuisineSelect.addEventListener("change", (event) => {
   state.cuisine = event.target.value;
   state.selectedDay = 0;
@@ -873,12 +1051,12 @@ document.querySelector("#copy-shopping").addEventListener("click", async () => {
   const items = [...shoppingList.querySelectorAll(".shopping-card")].map((card) => card.innerText).join("\n\n");
   try {
     await navigator.clipboard.writeText(items);
-    document.querySelector("#copy-shopping").textContent = "Copied";
+    document.querySelector("#copy-shopping").textContent = t("copied");
     setTimeout(() => {
-      document.querySelector("#copy-shopping").textContent = "Copy list";
+      document.querySelector("#copy-shopping").textContent = t("copyList");
     }, 1200);
   } catch {
-    document.querySelector("#copy-shopping").textContent = "Select list";
+    document.querySelector("#copy-shopping").textContent = t("selectList");
   }
 });
 

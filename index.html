@@ -18,13 +18,21 @@
         </div>
 
         <form class="controls" id="program-form">
+          <label for="language-select">
+            <span data-i18n="language">Language</span>
+            <select id="language-select" aria-label="Language">
+              <option value="en">English</option>
+              <option value="uk">Українська</option>
+            </select>
+          </label>
+
           <label for="cuisine-select">
-            <span>Cuisine</span>
+            <span data-i18n="cuisine">Cuisine</span>
             <select id="cuisine-select" aria-label="Cuisine"></select>
           </label>
 
           <label for="level-select">
-            <span>Level</span>
+            <span data-i18n="level">Level</span>
             <select id="level-select" aria-label="Level">
               <option value="beginner">Beginner</option>
               <option value="intermediate">Intermediate</option>
@@ -32,43 +40,43 @@
           </label>
 
           <label for="servings-input">
-            <span>Servings</span>
+            <span data-i18n="servings">Servings</span>
             <input id="servings-input" type="number" min="1" max="6" value="1" aria-label="Servings">
           </label>
 
           <fieldset>
-            <legend>Constraints</legend>
+            <legend data-i18n="constraints">Constraints</legend>
             <label class="check-row">
               <input id="vegetarian-input" type="checkbox">
-              <span>Vegetarian</span>
+              <span data-i18n="vegetarian">Vegetarian</span>
             </label>
             <label class="check-row">
               <input id="no-oven-input" type="checkbox" checked>
-              <span>No oven</span>
+              <span data-i18n="noOven">No oven</span>
             </label>
             <label class="check-row">
               <input id="high-protein-input" type="checkbox">
-              <span>High protein</span>
+              <span data-i18n="highProtein">High protein</span>
             </label>
           </fieldset>
         </form>
 
         <section class="market-card" aria-label="Germany ingredient help">
-          <h2>Germany Mode</h2>
-          <p>Plans prefer ingredients found at Rewe, Edeka, Aldi, Lidl, Asian markets, Turkish markets, or Italian delis in Berlin.</p>
+          <h2 data-i18n="germanyMode">Germany Mode</h2>
+          <p data-i18n="germanyModeText">Plans prefer ingredients found at Rewe, Edeka, Aldi, Lidl, Asian markets, Turkish markets, or Italian delis in Berlin.</p>
         </section>
       </aside>
 
       <section class="workspace">
         <header class="topbar">
           <div>
-            <p class="eyebrow">7-day cooking path</p>
+            <p class="eyebrow" data-i18n="pathEyebrow">7-day cooking path</p>
             <h2 id="program-title">Italian Beginner Week</h2>
           </div>
           <div class="top-actions" role="group" aria-label="View switcher">
-            <button class="tab-button active" type="button" data-view="plan">Plan</button>
-            <button class="tab-button" type="button" data-view="shopping">Shopping</button>
-            <button class="tab-button" type="button" data-view="progress">Progress</button>
+            <button class="tab-button active" type="button" data-view="plan" data-i18n="plan">Plan</button>
+            <button class="tab-button" type="button" data-view="shopping" data-i18n="shopping">Shopping</button>
+            <button class="tab-button" type="button" data-view="progress" data-i18n="progress">Progress</button>
           </div>
         </header>
 
@@ -80,10 +88,10 @@
         <section class="view" id="shopping-view" aria-label="Shopping list">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">For the whole week</p>
-              <h2>Shopping List</h2>
+              <p class="eyebrow" data-i18n="wholeWeek">For the whole week</p>
+              <h2 data-i18n="shoppingList">Shopping List</h2>
             </div>
-            <button class="ghost-button" type="button" id="copy-shopping">Copy list</button>
+            <button class="ghost-button" type="button" id="copy-shopping" data-i18n="copyList">Copy list</button>
           </div>
           <div class="shopping-grid" id="shopping-list"></div>
         </section>
@@ -91,10 +99,10 @@
         <section class="view" id="progress-view" aria-label="Progress tracker">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">Your notes</p>
-              <h2>Cooking Progress</h2>
+              <p class="eyebrow" data-i18n="yourNotes">Your notes</p>
+              <h2 data-i18n="cookingProgress">Cooking Progress</h2>
             </div>
-            <button class="ghost-button" type="button" id="reset-progress">Reset</button>
+            <button class="ghost-button" type="button" id="reset-progress" data-i18n="reset">Reset</button>
           </div>
           <div class="progress-grid" id="progress-list"></div>
         </section>
