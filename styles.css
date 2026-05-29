@@ -502,8 +502,10 @@ fieldset {
 }
 
 .macro-grid div {
-  display: grid;
-  gap: 2px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
   min-width: 0;
   padding: 8px;
   border-radius: 7px;
@@ -511,6 +513,7 @@ fieldset {
 }
 
 .macro-grid dt {
+  flex: 1 1 auto;
   color: var(--muted);
   font-size: 0.68rem;
   font-weight: 800;
@@ -518,6 +521,7 @@ fieldset {
 }
 
 .macro-grid dd {
+  flex: 0 0 auto;
   margin: 0;
   color: var(--ink);
   font-size: 0.9rem;

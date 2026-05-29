@@ -1625,10 +1625,10 @@ function renderRecipe(dish) {
             <small>${t("perServing")}</small>
           </div>
           <dl class="macro-grid">
-            <div><dt>${t("calories")}</dt><dd>${macros.calories} kcal</dd></div>
-            <div><dt>${t("protein")}</dt><dd>${macros.protein} g</dd></div>
-            <div><dt>${t("carbs")}</dt><dd>${macros.carbs} g</dd></div>
-            <div><dt>${t("fat")}</dt><dd>${macros.fat} g</dd></div>
+            <div><dt>${t("calories")}:</dt><dd>${macros.calories} kcal</dd></div>
+            <div><dt>${t("protein")}:</dt><dd>${macros.protein} g</dd></div>
+            <div><dt>${t("carbs")}:</dt><dd>${macros.carbs} g</dd></div>
+            <div><dt>${t("fat")}:</dt><dd>${macros.fat} g</dd></div>
           </dl>
         </div>
         <div class="recipe-actions">
