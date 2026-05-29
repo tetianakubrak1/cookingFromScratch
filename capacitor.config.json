@@ -1,0 +1,8 @@
+{
+  "appId": "com.tetianakubrak.cookingfromscratch",
+  "appName": "Cooking From Scratch",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
