@@ -174,6 +174,11 @@ const cuisines = {
         ],
         substitutions: ["This egg-free version is simpler and calmer for a first try."]
       }
+    ],
+    alternatives: [
+      recipe("Penne all'Arrabbiata", "Spicy tomato sauce and seasoning control", 25, "Easy", ["sauce", "vegetarian", "no oven"], [["pasta", "100 g penne", 100], ["pantry", "200 g canned tomatoes or passata", 200], ["produce", "1 garlic clove", 1], ["pantry", "1 tbsp olive oil", 1], ["pantry", "chili flakes", 1], ["produce", "parsley, optional", 1], ["dairy", "20 g Parmesan or Grana Padano", 20]], ["pot", "saucepan", "knife", "spoon", "grater"], ["Cook garlic and chili gently in olive oil.", "Add tomatoes and simmer for 15 minutes.", "Cook penne in salted water.", "Toss pasta with sauce and a splash of pasta water.", "Finish with parsley and cheese if you like."], ["Passata works better than weak fresh tomatoes."]),
+      recipe("Frittata alle Erbe", "Egg texture and gentle pan cooking", 22, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["dairy", "20 g Parmesan or Grana Padano", 20], ["produce", "fresh herbs or spring onion", 1], ["dairy", "1 tsp butter", 1], ["pantry", "salt and black pepper", 1]], ["bowl", "fork", "small frying pan", "spatula"], ["Beat eggs with cheese, herbs, salt, and pepper.", "Melt butter in a small pan on low-medium heat.", "Add eggs and cook slowly until mostly set.", "Fold or flip carefully.", "Rest for 1 minute before eating."], ["Use parsley, chives, basil, or whatever herbs look good."]),
+      recipe("Panzanella with Roasted Peppers", "Bread salad balance without fresh tomatoes", 18, "Easy", ["vegetarian", "no oven"], [["bakery", "2 slices stale bread", 2], ["pantry", "100 g roasted peppers from a jar", 100], ["produce", "1/4 red onion", 0.25], ["pantry", "1 tbsp olive oil", 1], ["pantry", "1 tsp vinegar", 1], ["dairy", "30 g mozzarella, optional", 30]], ["knife", "cutting board", "bowl", "pan or toaster"], ["Toast or pan-crisp the bread.", "Slice roasted peppers and onion.", "Whisk olive oil with vinegar, salt, and pepper.", "Toss everything together.", "Add mozzarella if you want it richer."], ["Jarred roasted peppers are reliable in Berlin when tomatoes are sad."])
     ]
   },
   japanese: {
@@ -187,6 +192,11 @@ const cuisines = {
       recipe("Tamago Sando", "Soft egg filling and seasoning", 20, "Easy", ["vegetarian"], [["dairy", "2 eggs", 2], ["bakery", "2 slices soft white bread", 2], ["dairy", "1 tbsp mayonnaise", 1], ["pantry", "salt and pepper", 1]], ["small pot", "bowl", "fork"], ["Boil eggs for 9 to 10 minutes.", "Cool, peel, and mash with mayonnaise.", "Season gently.", "Fill soft bread and trim if you want a neat sandwich."], ["Japanese mayo is nice, but ordinary mayo works."]),
       recipe("Gyoza Bowl", "Crisp-bottom dumplings and dipping sauce", 20, "Easy", ["shortcut"], [["frozen", "6 frozen gyoza", 6], ["pantry", "80 g rice", 80], ["produce", "cucumber", 1], ["pantry", "soy sauce and vinegar", 1]], ["frying pan with lid", "pot"], ["Cook rice.", "Pan-fry frozen gyoza in oil for 2 minutes.", "Add a splash of water, cover, and steam until cooked.", "Serve with rice, cucumber, and dipping sauce."], ["Frozen gyoza are easy to find in Asian markets."]),
       recipe("Matcha Pudding", "Gelatin-free chilled dessert", 15, "Easy", ["dessert"], [["dairy", "200 ml milk", 200], ["pantry", "1 tsp matcha", 1], ["pantry", "1 tbsp sugar", 1], ["pantry", "1 tbsp cornstarch", 1]], ["saucepan", "whisk", "glass"], ["Whisk matcha, sugar, and cornstarch with a splash of milk.", "Add remaining milk and heat while whisking.", "Cook until thickened.", "Pour into a glass and chill."], ["Matcha is easiest to find at Asian markets, dm, or tea shops."])
+    ],
+    alternatives: [
+      recipe("Ochazuke", "Simple rice bowl with hot tea or broth", 15, "Easy", ["rice", "no oven"], [["pantry", "80 g cooked rice", 80], ["pantry", "250 ml green tea or light stock", 250], ["pantry", "1 nori sheet", 1], ["pantry", "soy sauce", 1], ["produce", "spring onion", 1]], ["bowl", "kettle", "knife"], ["Put hot rice in a bowl.", "Pour over hot tea or light stock.", "Season with a little soy sauce.", "Top with torn nori and spring onion.", "Eat while hot."], ["Use leftover rice for the fastest version."]),
+      recipe("Tofu Donburi", "Quick bowl assembly and soy-ginger seasoning", 25, "Easy", ["vegetarian", "rice", "no oven"], [["produce", "150 g tofu", 150], ["pantry", "80 g rice", 80], ["pantry", "1 tbsp soy sauce", 1], ["produce", "1 tsp grated ginger", 1], ["produce", "spring onion", 1], ["pantry", "sesame seeds", 1]], ["pot", "frying pan", "knife"], ["Cook rice.", "Pat tofu dry and cube it.", "Pan-fry tofu until lightly golden.", "Add soy sauce and ginger for the last minute.", "Serve over rice with spring onion and sesame."], ["Firm tofu from Asian markets or bio shops works best."]),
+      recipe("Cold Soba with Cucumber", "Noodle rinsing and dipping sauce", 20, "Easy", ["vegetarian", "no oven"], [["pasta", "100 g soba noodles", 100], ["produce", "1/2 cucumber", 0.5], ["pantry", "1.5 tbsp soy sauce", 1.5], ["pantry", "1 tsp sugar", 1], ["pantry", "sesame seeds", 1]], ["pot", "colander", "bowl", "knife"], ["Cook soba according to the package.", "Rinse under cold water until the noodles feel cool.", "Mix soy sauce, sugar, and a splash of water.", "Slice cucumber thinly.", "Serve noodles with cucumber and sesame."], ["Buckwheat soba is usually in Asian markets; wheat noodles can stand in."])
     ]
   },
   mexican: {
@@ -200,6 +210,11 @@ const cuisines = {
       recipe("Elote Bowl", "Charred corn and creamy acidity", 20, "Easy", ["vegetarian"], [["frozen", "200 g corn", 200], ["dairy", "1 tbsp mayonnaise", 1], ["dairy", "1 tbsp yogurt", 1], ["produce", "1/2 lime", 0.5], ["dairy", "30 g feta", 30], ["pantry", "chili powder", 1]], ["frying pan", "bowl"], ["Char corn in a hot dry pan.", "Mix mayo, yogurt, lime, and chili.", "Stir corn through the sauce.", "Top with crumbled feta."], ["Feta is an easy substitute for cotija."]),
       recipe("Arroz Rojo", "Seasoned rice absorption", 30, "Easy", ["rice"], [["pantry", "80 g long grain rice", 80], ["pantry", "150 g passata", 150], ["pantry", "250 ml stock", 250], ["produce", "1/2 onion", 0.5], ["produce", "1 garlic clove", 1]], ["pot with lid", "knife"], ["Rinse rice.", "Cook onion and garlic in oil.", "Add rice and toast for 1 minute.", "Add passata and stock, cover, and cook gently.", "Rest covered before fluffing."], ["Use basmati if long grain rice is what you have."]),
       recipe("Churro-Style Toast", "Cinnamon sugar dessert shortcut", 15, "Easy", ["dessert"], [["bakery", "2 slices bread", 2], ["dairy", "1 tbsp butter", 1], ["pantry", "1 tbsp sugar", 1], ["pantry", "1 tsp cinnamon", 1], ["dairy", "yogurt, optional", 1]], ["frying pan", "plate"], ["Mix sugar and cinnamon.", "Toast bread in butter until crisp.", "Coat with cinnamon sugar.", "Serve with yogurt if you want balance."], ["A practical weeknight dessert, not a traditional churro."])
+    ],
+    alternatives: [
+      recipe("Mushroom Tacos", "Browning mushrooms for deep flavor", 25, "Easy", ["vegetarian", "no oven"], [["bakery", "3 small tortillas", 3], ["produce", "200 g mushrooms", 200], ["produce", "1/2 onion", 0.5], ["produce", "1 lime", 1], ["dairy", "40 g feta or yogurt", 40], ["pantry", "smoked paprika", 1]], ["frying pan", "knife", "spatula"], ["Slice mushrooms and onion.", "Cook them in a hot pan until browned.", "Season with smoked paprika, salt, and lime.", "Warm tortillas.", "Fill tortillas and top with feta or yogurt."], ["Brown Champignons are perfect here."]),
+      recipe("Huevos Rancheros-ish", "Eggs with tomato-chili beans", 25, "Easy", ["vegetarian", "no oven"], [["dairy", "2 eggs", 2], ["pantry", "150 g canned beans", 150], ["pantry", "150 g passata", 150], ["bakery", "2 tortillas", 2], ["pantry", "chili powder", 1], ["produce", "1 lime", 1]], ["frying pan", "small saucepan", "spatula"], ["Warm beans with passata, chili, and salt.", "Fry eggs to your liking.", "Warm tortillas.", "Spoon beans onto tortillas.", "Top with eggs and lime."], ["Passata keeps this good even without fresh tomatoes."]),
+      recipe("Avocado Lime Rice Bowl", "Acid, fat, and herb balance", 20, "Easy", ["vegetarian", "rice", "no oven"], [["pantry", "80 g rice", 80], ["produce", "1/2 avocado", 0.5], ["produce", "1 lime", 1], ["pantry", "150 g canned beans", 150], ["produce", "coriander or parsley", 1], ["dairy", "1 tbsp yogurt, optional", 1]], ["pot", "bowl", "knife"], ["Cook rice.", "Warm beans with salt and a splash of water.", "Mash avocado with lime and salt.", "Layer rice, beans, and avocado.", "Finish with herbs and yogurt if using."], ["Parsley is fine if coriander is hard to find or you dislike it."])
     ]
   }
 };
@@ -226,7 +241,8 @@ const state = {
   noOven: true,
   selectedDay: 0,
   view: "plan",
-  progress: JSON.parse(localStorage.getItem("cuisineCoachProgress") || "{}")
+  progress: JSON.parse(localStorage.getItem("cuisineCoachProgress") || "{}"),
+  swaps: JSON.parse(localStorage.getItem("cuisineCoachSwaps") || "{}")
 };
 
 const cuisineSelect = document.querySelector("#cuisine-select");
@@ -248,13 +264,34 @@ Object.entries(cuisines).forEach(([key, cuisine]) => {
 });
 
 function getWeek() {
-  const all = cuisines[state.cuisine].week;
-  if (!state.vegetarian) return all;
-  return all.map((item) => {
-    if (item.tags.includes("vegetarian") || item.tags.includes("dessert")) return item;
-    const replacement = all.find((candidate) => candidate.tags.includes("vegetarian") && candidate.name !== item.name);
-    return replacement || item;
+  const base = cuisines[state.cuisine].week.map((dish) => {
+    if (!state.vegetarian || isVegetarianDish(dish)) return dish;
+    return getCandidates().find((candidate) => isVegetarianDish(candidate)) || dish;
   });
+
+  return base.map((dish, dayIndex) => {
+    const swappedName = state.swaps[swapKey(dayIndex)];
+    if (!swappedName) return dish;
+    return getCandidates().find((candidate) => candidate.name === swappedName) || dish;
+  });
+}
+
+function getCandidates() {
+  const cuisine = cuisines[state.cuisine];
+  return [...cuisine.week, ...(cuisine.alternatives || [])].filter((dish) => {
+    if (state.vegetarian && !isVegetarianDish(dish)) return false;
+    if (state.noOven && dish.tags.includes("oven")) return false;
+    return true;
+  });
+}
+
+function isVegetarianDish(dish) {
+  if (dish.tags.includes("vegetarian") || dish.tags.includes("dessert")) return true;
+  return !dish.ingredients.some(([category]) => category === "meat");
+}
+
+function swapKey(dayIndex) {
+  return `${state.cuisine}-${dayIndex}`;
 }
 
 function progressKey(dayIndex) {
@@ -303,6 +340,7 @@ function renderDays(week) {
 function renderRecipe(dish) {
   const key = progressKey(state.selectedDay);
   const done = Boolean(state.progress[key]?.done);
+  const candidates = getCandidates();
   recipePanel.innerHTML = `
     <div class="recipe-hero">
       <div class="recipe-title">
@@ -314,9 +352,21 @@ function renderRecipe(dish) {
           <span class="pill">${dish.difficulty}</span>
           <span class="pill">${state.servings} serving${state.servings > 1 ? "s" : ""}</span>
         </div>
-        <button class="complete-button ${done ? "done" : ""}" type="button" id="complete-day">${done ? "Cooked" : "Mark cooked"}</button>
+        <div class="recipe-actions">
+          <button class="complete-button ${done ? "done" : ""}" type="button" id="complete-day">${done ? "Cooked" : "Mark cooked"}</button>
+          <button class="ghost-button" type="button" id="surprise-dish">Surprise me</button>
+        </div>
+        <label class="swap-control" for="dish-swap-select">
+          <span>Choose another dish</span>
+          <select id="dish-swap-select" aria-label="Choose another dish">
+            ${candidates.map((candidate) => `<option value="${escapeAttribute(candidate.name)}" ${candidate.name === dish.name ? "selected" : ""}>${candidate.name}</option>`).join("")}
+          </select>
+        </label>
       </div>
-      <div class="dish-art" aria-hidden="true"></div>
+      <figure class="dish-photo-wrap">
+        <img class="dish-photo" src="${dishImageUrl(dish)}" alt="${dish.name}" loading="lazy" onerror="this.closest('.dish-photo-wrap').classList.add('image-fallback'); this.remove();">
+        <figcaption>${dish.name}</figcaption>
+      </figure>
     </div>
     <div class="recipe-body">
       <div class="info-block">
@@ -344,6 +394,18 @@ function renderRecipe(dish) {
   document.querySelector("#complete-day").addEventListener("click", () => {
     state.progress[key] = { ...state.progress[key], done: !done };
     saveProgress();
+    render();
+  });
+  document.querySelector("#dish-swap-select").addEventListener("change", (event) => {
+    state.swaps[swapKey(state.selectedDay)] = event.target.value;
+    saveSwaps();
+    render();
+  });
+  document.querySelector("#surprise-dish").addEventListener("click", () => {
+    const currentIndex = candidates.findIndex((candidate) => candidate.name === dish.name);
+    const nextDish = candidates[(currentIndex + 1) % candidates.length];
+    state.swaps[swapKey(state.selectedDay)] = nextDish.name;
+    saveSwaps();
     render();
   });
 }
@@ -409,8 +471,131 @@ function saveProgress() {
   localStorage.setItem("cuisineCoachProgress", JSON.stringify(state.progress));
 }
 
+function saveSwaps() {
+  localStorage.setItem("cuisineCoachSwaps", JSON.stringify(state.swaps));
+}
+
 function capitalize(value) {
   return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function dishImageUrl(dish) {
+  const type = dishType(dish);
+  const colors = {
+    pasta: ["#f2c36b", "#d95d39", "#fff8dc"],
+    rice: ["#f6f0df", "#2f6f8f", "#b7d8c4"],
+    soup: ["#d39b5b", "#7aa36f", "#fff8dc"],
+    taco: ["#e2b35f", "#3f7d56", "#c94f3d"],
+    dessert: ["#eee4d5", "#7d4b35", "#ffffff"],
+    protein: ["#d99b6c", "#f0d8b6", "#3f7d56"],
+    bowl: ["#f4efe4", "#b48732", "#2f6f8f"]
+  }[type];
+  const hash = hashString(dish.name);
+  const angle = (hash % 18) - 9;
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-label="${dish.name}">
+      <defs>
+        <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+          <stop stop-color="${colors[1]}" offset="0"/>
+          <stop stop-color="${colors[2]}" offset="1"/>
+        </linearGradient>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#17202a" flood-opacity="0.22"/>
+        </filter>
+      </defs>
+      <rect width="900" height="650" fill="url(#bg)"/>
+      <circle cx="710" cy="115" r="76" fill="#ffffff" opacity="0.25"/>
+      <circle cx="168" cy="530" r="110" fill="#ffffff" opacity="0.16"/>
+      <ellipse cx="450" cy="360" rx="300" ry="190" fill="#ffffff" opacity="0.92" filter="url(#shadow)"/>
+      <ellipse cx="450" cy="360" rx="230" ry="128" fill="${colors[0]}" opacity="0.95"/>
+      ${dishShape(type, angle)}
+      <rect x="275" y="505" width="350" height="42" rx="21" fill="#17202a" opacity="0.14"/>
+    </svg>
+  `;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
+function hashString(value) {
+  return [...value].reduce((hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) >>> 0, 0) % 10000;
+}
+
+function dishType(dish) {
+  const name = dish.name.toLowerCase();
+  if (name.includes("spaghetti") || name.includes("pasta") || name.includes("penne") || name.includes("gnocchi") || name.includes("soba") || name.includes("yakisoba")) return "pasta";
+  if (name.includes("risotto") || name.includes("rice") || name.includes("onigiri") || name.includes("donburi") || name.includes("ochazuke")) return "rice";
+  if (name.includes("soup") || name.includes("miso") || name.includes("fideo")) return "soup";
+  if (name.includes("taco") || name.includes("quesadilla") || name.includes("rancheros")) return "taco";
+  if (name.includes("tiramisu") || name.includes("pudding") || name.includes("toast")) return "dessert";
+  if (dish.ingredients.some(([category]) => category === "meat")) return "protein";
+  return "bowl";
+}
+
+function dishShape(type, angle) {
+  if (type === "pasta") {
+    return `<g fill="none" stroke="#fff7d4" stroke-width="20" stroke-linecap="round" transform="rotate(${angle} 450 360)">
+      <path d="M290 340c70-70 150 65 230-4s132 8 112 58"/>
+      <path d="M305 390c92-66 122 50 210-14s142 12 94 58"/>
+      <path d="M330 300c80-46 120 48 200-12s118 0 120 42"/>
+      <circle cx="565" cy="325" r="22" fill="#c94f3d" stroke="none"/>
+      <circle cx="390" cy="400" r="18" fill="#3f7d56" stroke="none"/>
+    </g>`;
+  }
+  if (type === "rice") {
+    return `<g transform="rotate(${angle} 450 360)">
+      <ellipse cx="450" cy="355" rx="165" ry="78" fill="#fffdf3"/>
+      <rect x="332" y="325" width="236" height="76" rx="38" fill="#17202a" opacity="0.18"/>
+      <circle cx="385" cy="336" r="10" fill="#3f7d56"/>
+      <circle cx="495" cy="382" r="10" fill="#b48732"/>
+      <circle cx="535" cy="336" r="10" fill="#c94f3d"/>
+    </g>`;
+  }
+  if (type === "soup") {
+    return `<g transform="rotate(${angle} 450 360)">
+      <ellipse cx="450" cy="358" rx="170" ry="92" fill="#c97942"/>
+      <ellipse cx="450" cy="330" rx="150" ry="58" fill="#e7a85e"/>
+      <rect x="335" y="405" width="230" height="18" rx="9" fill="#ffffff" opacity="0.55"/>
+      <circle cx="385" cy="320" r="16" fill="#fff8dc"/>
+      <circle cx="500" cy="335" r="12" fill="#3f7d56"/>
+    </g>`;
+  }
+  if (type === "taco") {
+    return `<g transform="rotate(${angle} 450 360)">
+      <path d="M285 385c42-116 288-116 330 0z" fill="#efc36d"/>
+      <path d="M325 370c55-60 196-60 250 0" fill="none" stroke="#8f5132" stroke-width="34" stroke-linecap="round"/>
+      <circle cx="395" cy="340" r="18" fill="#3f7d56"/>
+      <circle cx="470" cy="330" r="16" fill="#c94f3d"/>
+      <circle cx="535" cy="352" r="14" fill="#ffffff"/>
+    </g>`;
+  }
+  if (type === "dessert") {
+    return `<g transform="rotate(${angle} 450 360)">
+      <rect x="330" y="270" width="240" height="175" rx="22" fill="#f4efe4"/>
+      <rect x="330" y="330" width="240" height="36" fill="#7d4b35"/>
+      <rect x="330" y="400" width="240" height="30" fill="#7d4b35"/>
+      <circle cx="390" cy="290" r="14" fill="#ffffff"/>
+      <circle cx="450" cy="290" r="14" fill="#ffffff"/>
+      <circle cx="510" cy="290" r="14" fill="#ffffff"/>
+    </g>`;
+  }
+  if (type === "protein") {
+    return `<g transform="rotate(${angle} 450 360)">
+      <ellipse cx="438" cy="350" rx="145" ry="78" fill="#d08452"/>
+      <path d="M330 330c72 44 154 49 240 0" fill="none" stroke="#f0d8b6" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="570" cy="390" r="24" fill="#f6e6a7"/>
+      <path d="M350 420l180-112" stroke="#ffffff" stroke-width="10" opacity="0.35"/>
+    </g>`;
+  }
+  return `<g transform="rotate(${angle} 450 360)">
+    <ellipse cx="450" cy="350" rx="160" ry="85" fill="#f3dfb1"/>
+    <circle cx="380" cy="340" r="28" fill="#3f7d56"/>
+    <circle cx="450" cy="378" r="26" fill="#c94f3d"/>
+    <circle cx="525" cy="335" r="24" fill="#2f6f8f"/>
+    <rect x="360" y="405" width="180" height="20" rx="10" fill="#ffffff" opacity="0.6"/>
+  </g>`;
+}
+
+function escapeAttribute(value) {
+  return value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
 
 document.querySelectorAll(".tab-button").forEach((button) => {

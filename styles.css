@@ -310,7 +310,7 @@ fieldset {
 
 .recipe-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 170px;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
   gap: 18px;
   align-items: stretch;
   padding: 20px;
@@ -318,8 +318,11 @@ fieldset {
   background: linear-gradient(90deg, #ffffff 0%, #f3f8f7 100%);
 }
 
-.dish-art {
-  min-height: 150px;
+.dish-photo-wrap {
+  display: grid;
+  align-content: end;
+  min-height: 240px;
+  margin: 0;
   border-radius: 8px;
   border: 1px solid rgba(23, 32, 42, 0.09);
   background:
@@ -329,27 +332,53 @@ fieldset {
   overflow: hidden;
 }
 
-.dish-art::before,
-.dish-art::after {
+.dish-photo-wrap::before,
+.dish-photo-wrap::after {
   content: "";
   position: absolute;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.55);
 }
 
-.dish-art::before {
+.dish-photo-wrap::before {
   width: 92px;
   height: 92px;
   right: 18px;
   top: 18px;
 }
 
-.dish-art::after {
+.dish-photo-wrap::after {
   width: 140px;
   height: 28px;
   left: 20px;
   bottom: 28px;
   transform: rotate(-8deg);
+}
+
+.dish-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dish-photo-wrap figcaption {
+  position: relative;
+  z-index: 2;
+  margin: 12px;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  justify-self: start;
+}
+
+.dish-photo-wrap.image-fallback figcaption {
+  align-self: end;
 }
 
 .recipe-title {
@@ -378,6 +407,23 @@ fieldset {
   background: #eef3f4;
   color: #405161;
   font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.recipe-actions {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) minmax(120px, auto);
+  gap: 8px;
+}
+
+.swap-control {
+  display: grid;
+  gap: 7px;
+}
+
+.swap-control span {
+  color: #364657;
+  font-size: 0.82rem;
   font-weight: 800;
 }
 
@@ -580,7 +626,12 @@ fieldset {
     padding-bottom: 4px;
   }
 
-  .dish-art {
-    min-height: 120px;
+  .dish-photo-wrap {
+    min-height: 170px;
+    order: -1;
+  }
+
+  .recipe-actions {
+    grid-template-columns: 1fr;
   }
 }
