@@ -341,6 +341,7 @@ function renderRecipe(dish) {
   const key = progressKey(state.selectedDay);
   const done = Boolean(state.progress[key]?.done);
   const candidates = getCandidates();
+  const photo = dishPhoto(dish);
   recipePanel.innerHTML = `
     <div class="recipe-hero">
       <div class="recipe-title">
@@ -364,8 +365,10 @@ function renderRecipe(dish) {
         </label>
       </div>
       <figure class="dish-photo-wrap">
-        <img class="dish-photo" src="${dishImageUrl(dish)}" alt="${dish.name}" loading="lazy" onerror="this.closest('.dish-photo-wrap').classList.add('image-fallback'); this.remove();">
-        <figcaption>${dish.name}</figcaption>
+        <img class="dish-photo" src="${dishImageUrl(dish)}" alt="${dish.name}" loading="lazy" onerror="this.src='${generatedDishImageUrl(dish)}'; this.closest('.dish-photo-wrap').classList.add('image-fallback');">
+        <figcaption>
+          ${photo ? `<a href="${photo.source}" target="_blank" rel="noreferrer">${dish.name} photo</a>` : `${dish.name} photo`}
+        </figcaption>
       </figure>
     </div>
     <div class="recipe-body">
@@ -480,6 +483,12 @@ function capitalize(value) {
 }
 
 function dishImageUrl(dish) {
+  const photo = dishPhoto(dish);
+  if (photo) return photo.url;
+  return `https://placeholdpicsum.dev/photo/seed/${encodeURIComponent(dish.name)}/900/650`;
+}
+
+function generatedDishImageUrl(dish) {
   const type = dishType(dish);
   const colors = {
     pasta: ["#f2c36b", "#d95d39", "#fff8dc"],
@@ -513,6 +522,43 @@ function dishImageUrl(dish) {
     </svg>
   `;
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
+function dishPhoto(dish) {
+  const photos = {
+    "Spaghetti Aglio e Olio": ["Spaghetti aglio e olio KB.jpg", "Wikimedia Commons"],
+    "Cacio e Pepe": ["Cacio e pepe.jpg", "Wikimedia Commons"],
+    "Pasta al Pomodoro": ["Pasta al pomodoro.JPG", "Wikimedia Commons"],
+    "Risotto ai Funghi": ["Risotto ai funghi porcini.JPG", "Wikimedia Commons"],
+    "Scaloppine al Limone": ["Scaloppine al limone.jpg", "Wikimedia Commons"],
+    "Gnocchi with Sage Butter": ["Zuni ricotta gnocchi with browned butter and sage.jpg", "Wikimedia Commons"],
+    "Tiramisu Cup": ["Tiramisu in a cup, July 2007.jpg", "Wikimedia Commons"],
+    "Penne all'Arrabbiata": ["Penne all'arrabbiata.jpg", "Wikimedia Commons"],
+    "Frittata alle Erbe": ["Frittata.jpg", "Wikimedia Commons"],
+    "Panzanella with Roasted Peppers": ["Panzanella.jpg", "Wikimedia Commons"],
+    "Onigiri": ["Onigiri.JPG", "Wikimedia Commons"],
+    "Miso Soup": ["Miso Soup 001.jpg", "Wikimedia Commons"],
+    "Chicken Teriyaki": ["Teriyaki Chicken (3284699052).jpg", "Wikimedia Commons"],
+    "Yakisoba": ["Yakisoba.jpg", "Wikimedia Commons"],
+    "Tamago Sando": ["Egg Sandwich 001.jpg", "Wikimedia Commons"],
+    "Gyoza Bowl": ["Gyoza (5930315588).jpg", "Wikimedia Commons"],
+    "Quesadilla": ["Cheese quesadilla.jpg", "Wikimedia Commons"],
+    "Pico-Free Bean Tacos": ["Roasted sweet potato + black bean tacos (7784822910).jpg", "Wikimedia Commons"],
+    "Sopa de Fideo": ["Sopa de fideo.jpg", "Wikimedia Commons"],
+    "Chicken Tinga": ["Tinga.jpg", "Wikimedia Commons"],
+    "Elote Bowl": ["Elote con crema y queso cotija.jpg", "Wikimedia Commons"],
+    "Churro-Style Toast": ["Cinnamon toast - 01.jpg", "Wikimedia Commons"],
+    "Mushroom Tacos": ["Tacos, rice, and beans.jpg", "Wikimedia Commons"],
+    "Huevos Rancheros-ish": ["Huevos rancheros 01.jpg", "Wikimedia Commons"]
+  };
+  const photo = photos[dish.name];
+  if (!photo) return null;
+  const fileName = photo[0];
+  return {
+    url: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=900`,
+    source: `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(fileName).replaceAll("%20", "_")}`,
+    credit: photo[1]
+  };
 }
 
 function hashString(value) {
