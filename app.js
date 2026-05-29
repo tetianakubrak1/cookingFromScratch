@@ -367,6 +367,12 @@ const translations = {
     medium: "Medium",
     photoComingSoon: "Photo coming soon",
     photo: "photo",
+    macros: "Estimated macros",
+    perServing: "per serving",
+    calories: "Calories",
+    protein: "Protein",
+    carbs: "Carbs",
+    fat: "Fat",
     cuisineNames: { italian: "Italian", chinese: "Chinese", french: "French" },
     programTitle: "{cuisine} {level} Week",
     categories
@@ -418,6 +424,12 @@ const translations = {
     medium: "Середньо",
     photoComingSoon: "Фото страви",
     photo: "фото",
+    macros: "Орієнтовні макроси",
+    perServing: "на порцію",
+    calories: "Калорії",
+    protein: "Білки",
+    carbs: "Вуглеводи",
+    fat: "Жири",
     cuisineNames: { italian: "Італійська", chinese: "Китайська", french: "Французька" },
     categories: {
       produce: "Овочі та зелень",
@@ -723,6 +735,142 @@ const textTranslations = {
   "Canned chickpeas make this fast and high protein.": "Консервований нут робить цю страву швидкою і білковою."
 };
 
+const macroProfiles = {
+  "arborio or carnaroli rice": per100g(360, 7, 78, 1),
+  "bacon or lardons": per100g(520, 14, 1, 50),
+  "beef stew meat": per100g(210, 28, 0, 11),
+  "bell pepper": per100g(31, 1, 6, 0),
+  "berries or apple": per100g(55, 1, 14, 0),
+  "black pepper": perTsp(6, 0, 1, 0),
+  bread: perUnit(80, 3, 15, 1),
+  broccoli: per100g(35, 3, 7, 0),
+  "buckwheat or wheat flour": per100g(340, 12, 72, 3),
+  butter: perTbsp(102, 0, 0, 12),
+  cabbage: per100g(25, 1, 6, 0),
+  "canned beans": per100g(110, 7, 20, 1),
+  "canned black beans": per100g(120, 8, 21, 1),
+  "canned chickpeas": per100g(150, 8, 24, 3),
+  "canned tomatoes": per100g(25, 1, 5, 0),
+  "canned white beans": per100g(110, 7, 20, 1),
+  carrot: perUnit(25, 1, 6, 0),
+  "celery stalk": perUnit(6, 0, 1, 0),
+  chicken: per100g(165, 31, 0, 4),
+  "chicken breast": per100g(165, 31, 0, 4),
+  "chicken breast or pork schnitzel": per100g(190, 29, 0, 7),
+  "chicken breast or thigh": per100g(190, 28, 0, 8),
+  "chicken breast, thinly sliced": per100g(165, 31, 0, 4),
+  "chicken thigh": per100g(210, 26, 0, 11),
+  "chicken thigh or breast": per100g(190, 28, 0, 8),
+  "chili flakes": perTsp(6, 0, 1, 0),
+  "cocoa powder": perTbsp(12, 1, 3, 1),
+  "coconut milk": per100ml(190, 2, 3, 19),
+  "cooked lentils": per100g(116, 9, 20, 0),
+  "cooked rice": per100g(130, 3, 28, 0),
+  corn: per100g(96, 3, 21, 1),
+  cornstarch: perTbsp(30, 0, 7, 0),
+  cream: per100ml(300, 2, 3, 30),
+  cucumber: perUnit(30, 1, 7, 0),
+  "dark chocolate": per100g(560, 8, 46, 38),
+  "dashi or vegetable stock": per100ml(8, 1, 1, 0),
+  "dijon mustard": perTsp(5, 0, 0, 0),
+  "dried porcini": per100g(290, 30, 30, 3),
+  egg: perUnit(70, 6, 1, 5),
+  "egg for batter plus 1 egg for filling": perUnit(70, 6, 1, 5),
+  "egg yolk": perUnit(55, 3, 1, 5),
+  "egg yolk plus 1 whole egg": perUnit(125, 9, 1, 10),
+  eggplant: perUnit(110, 4, 25, 1),
+  feta: per100g(265, 14, 4, 21),
+  "feta or yogurt": per100g(160, 10, 5, 10),
+  "firm tofu": per100g(90, 10, 2, 5),
+  flour: per100g(364, 10, 76, 1),
+  "flour, plus extra": per100g(364, 10, 76, 1),
+  "fromage blanc or greek yogurt": per100g(75, 9, 4, 2),
+  "frozen berries": per100g(50, 1, 12, 0),
+  "frozen gyoza": perUnit(45, 2, 6, 1),
+  gelatin: perUnit(8, 2, 0, 0),
+  "glutinous rice flour": per100g(365, 6, 80, 1),
+  "grated cheese": per100g(380, 25, 2, 30),
+  "green beans": per100g(31, 2, 7, 0),
+  "green beans or lettuce": per100g(25, 2, 5, 0),
+  ham: perUnit(45, 5, 1, 2),
+  honey: perTbsp(64, 0, 17, 0),
+  ketchup: perTbsp(17, 0, 4, 0),
+  lemon: perUnit(17, 1, 5, 0),
+  lime: perUnit(20, 0, 7, 0),
+  loffelbiskuits: perUnit(30, 1, 6, 1),
+  "long grain rice": per100g(360, 7, 79, 1),
+  "mango or frozen mango": per100g(60, 1, 15, 0),
+  mascarpone: per100g(430, 5, 4, 44),
+  mayonnaise: perTbsp(90, 0, 0, 10),
+  milk: per100ml(50, 3, 5, 2),
+  "milk or water": per100ml(30, 2, 3, 1),
+  "minced pork or mushrooms": per100g(190, 15, 2, 12),
+  "miso paste": perTbsp(35, 2, 4, 1),
+  "mixed vegetables": per100g(60, 3, 10, 1),
+  "mozzarella, optional": per100g(280, 22, 3, 20),
+  mushrooms: per100g(22, 3, 3, 0),
+  "neutral oil": perTbsp(119, 0, 0, 14),
+  "nori sheet": perUnit(5, 1, 1, 0),
+  nuts: perTbsp(50, 2, 2, 4),
+  "olive oil": perTbsp(119, 0, 0, 14),
+  onion: perUnit(45, 1, 10, 0),
+  "pancetta or guanciale": per100g(500, 16, 0, 48),
+  parmesan: per100g(430, 38, 4, 29),
+  "parmesan or grana padano": per100g(410, 36, 3, 28),
+  "parmesan or grana padano, optional": per100g(410, 36, 3, 28),
+  passata: per100g(35, 2, 6, 0),
+  "passata or canned tomatoes": per100g(30, 1, 6, 0),
+  "peanut butter or sesame paste": perTbsp(95, 4, 3, 8),
+  peanuts: per100g(570, 26, 16, 49),
+  "peas or mixed vegetables": per100g(80, 5, 14, 0),
+  "pecorino romano": per100g(390, 32, 4, 27),
+  penne: per100g(360, 13, 72, 2),
+  "penne or spaghetti": per100g(360, 13, 72, 2),
+  potatoes: per100g(77, 2, 17, 0),
+  prosciutto: perUnit(35, 4, 0, 2),
+  "red wine or stock": per100ml(45, 0, 2, 0),
+  rice: per100g(360, 7, 79, 1),
+  ricotta: per100g(175, 11, 3, 13),
+  "ricotta salata or feta": per100g(300, 18, 4, 23),
+  "rigatoni or penne": per100g(360, 13, 72, 2),
+  "roasted peppers from a jar": per100g(35, 1, 7, 0),
+  "salmon fillet": per100g(208, 20, 0, 13),
+  "seasonal vegetables": per100g(50, 2, 10, 0),
+  "sesame seeds": perTsp(17, 1, 1, 1),
+  "shortcrust pastry": perUnit(450, 7, 45, 28),
+  "small can tuna": perUnit(140, 30, 0, 2),
+  "small eggplant": perUnit(80, 3, 18, 1),
+  "small ready-made shortcrust pastry": perUnit(450, 7, 45, 28),
+  "small tapioca pearls or pudding rice": per100g(350, 2, 82, 0),
+  "small zucchini": perUnit(30, 2, 6, 0),
+  "soba noodles": per100g(350, 13, 70, 2),
+  "soft white bread": perUnit(75, 3, 14, 1),
+  spaghetti: per100g(360, 13, 72, 2),
+  "spaghetti or bucatini": per100g(360, 13, 72, 2),
+  spinach: per100g(23, 3, 4, 0),
+  "stale bread": perUnit(75, 3, 14, 1),
+  stock: per100ml(8, 1, 1, 0),
+  "stock or water": per100ml(5, 1, 1, 0),
+  "stock or white wine": per100ml(30, 0, 1, 0),
+  "store-bought gnocchi": per100g(160, 4, 33, 1),
+  sugar: perTbsp(49, 0, 13, 0),
+  "sushi rice": per100g(360, 7, 79, 1),
+  "thick slice bread": perUnit(120, 5, 22, 2),
+  "thin noodles": per100g(360, 12, 74, 2),
+  tofu: per100g(85, 9, 2, 5),
+  "tomato or 180 g canned tomato": perUnit(45, 2, 10, 0),
+  "tomatoes or canned tomatoes": perUnit(45, 2, 10, 0),
+  tortillas: perUnit(140, 4, 24, 4),
+  "vegetable stock": per100ml(8, 1, 1, 0),
+  "warm water": per100ml(0, 0, 0, 0),
+  "wheat noodles": per100g(360, 12, 74, 2),
+  "whipping cream": per100ml(300, 2, 3, 30),
+  "white fish fillet": per100g(90, 20, 0, 1),
+  "yogurt": perTbsp(9, 1, 1, 0),
+  "yogurt or sour cream": per100g(120, 5, 5, 8),
+  zucchini: perUnit(35, 2, 7, 0)
+};
+
 const state = {
   cuisine: "italian",
   level: "beginner",
@@ -774,6 +922,26 @@ function applyLanguage() {
 
 function t(key) {
   return key.split(".").reduce((value, part) => value?.[part], translations[state.language]) ?? key;
+}
+
+function per100g(calories, protein, carbs, fat) {
+  return { basis: "100g", calories, protein, carbs, fat };
+}
+
+function per100ml(calories, protein, carbs, fat) {
+  return { basis: "100ml", calories, protein, carbs, fat };
+}
+
+function perUnit(calories, protein, carbs, fat) {
+  return { basis: "unit", calories, protein, carbs, fat };
+}
+
+function perTbsp(calories, protein, carbs, fat) {
+  return { basis: "tbsp", calories, protein, carbs, fat };
+}
+
+function perTsp(calories, protein, carbs, fat) {
+  return { basis: "tsp", calories, protein, carbs, fat };
 }
 
 function getWeek() {
@@ -1067,6 +1235,66 @@ function formatShoppingItem(item) {
   return [quantity, unit, displayName].filter(Boolean).join(" ");
 }
 
+function recipeMacros(dish) {
+  const totals = dish.ingredients.reduce((sum, [, text, amount]) => addMacros(sum, ingredientMacros(text, amount)), emptyMacros());
+  return {
+    calories: Math.round(totals.calories / 10) * 10,
+    protein: Math.round(totals.protein),
+    carbs: Math.round(totals.carbs),
+    fat: Math.round(totals.fat)
+  };
+}
+
+function ingredientMacros(text, amount) {
+  const parsed = parseIngredient(text, amount);
+  const profile = findMacroProfile(parsed.name);
+  if (!profile || typeof parsed.amount !== "number") return emptyMacros();
+
+  let factor = 0;
+  if (parsed.unit === "g" && profile.basis === "100g") factor = parsed.amount / 100;
+  if (parsed.unit === "ml" && profile.basis === "100ml") factor = parsed.amount / 100;
+  if (parsed.unit === "tbsp" && profile.basis === "tbsp") factor = parsed.amount;
+  if (parsed.unit === "tsp" && profile.basis === "tsp") factor = parsed.amount;
+  if (!parsed.unit && profile.basis === "unit") factor = parsed.amount;
+  if (parsed.unit === "tbsp" && profile.basis === "tsp") factor = parsed.amount * 3;
+  if (parsed.unit === "tsp" && profile.basis === "tbsp") factor = parsed.amount / 3;
+  if (parsed.unit === "g" && profile.basis === "unit") factor = parsed.amount;
+  if (parsed.unit === "ml" && profile.basis === "100g") factor = parsed.amount / 100;
+
+  if (!factor) return emptyMacros();
+  return multiplyMacros(profile, factor);
+}
+
+function findMacroProfile(name) {
+  if (macroProfiles[name]) return macroProfiles[name];
+  const match = Object.keys(macroProfiles)
+    .sort((a, b) => b.length - a.length)
+    .find((key) => name.includes(key) || key.includes(name));
+  return match ? macroProfiles[match] : null;
+}
+
+function emptyMacros() {
+  return { calories: 0, protein: 0, carbs: 0, fat: 0 };
+}
+
+function addMacros(left, right) {
+  return {
+    calories: left.calories + right.calories,
+    protein: left.protein + right.protein,
+    carbs: left.carbs + right.carbs,
+    fat: left.fat + right.fat
+  };
+}
+
+function multiplyMacros(profile, factor) {
+  return {
+    calories: profile.calories * factor,
+    protein: profile.protein * factor,
+    carbs: profile.carbs * factor,
+    fat: profile.fat * factor
+  };
+}
+
 function render() {
   const cuisine = cuisines[state.cuisine];
   const week = getWeek();
@@ -1108,6 +1336,7 @@ function renderRecipe(dish) {
   const done = Boolean(state.progress[key]?.done);
   const candidates = getSwapCandidates();
   const photo = dishPhoto(dish);
+  const macros = recipeMacros(dish);
   recipePanel.innerHTML = `
     <div class="recipe-hero">
       <div class="recipe-title">
@@ -1118,6 +1347,18 @@ function renderRecipe(dish) {
           <span class="pill">${dish.time} ${t("min")}</span>
           <span class="pill">${t(dish.difficulty.toLowerCase())}</span>
           <span class="pill">${state.servings} ${state.servings > 1 ? t("servingsWord") : t("serving")}</span>
+        </div>
+        <div class="macro-card" aria-label="${t("macros")} ${t("perServing")}">
+          <div>
+            <span>${t("macros")}</span>
+            <small>${t("perServing")}</small>
+          </div>
+          <dl class="macro-grid">
+            <div><dt>${t("calories")}</dt><dd>${macros.calories} kcal</dd></div>
+            <div><dt>${t("protein")}</dt><dd>${macros.protein} g</dd></div>
+            <div><dt>${t("carbs")}</dt><dd>${macros.carbs} g</dd></div>
+            <div><dt>${t("fat")}</dt><dd>${macros.fat} g</dd></div>
+          </dl>
         </div>
         <div class="recipe-actions">
           <button class="complete-button ${done ? "done" : ""}" type="button" id="complete-day">${done ? t("cooked") : t("markCooked")}</button>

@@ -466,6 +466,65 @@ fieldset {
   font-weight: 800;
 }
 
+.macro-card {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.macro-card > div:first-child {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.macro-card span {
+  color: #364657;
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.macro-card small {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 750;
+}
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(58px, 1fr));
+  gap: 6px;
+  margin: 0;
+}
+
+.macro-grid div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 7px;
+  background: #eef3f4;
+}
+
+.macro-grid dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.macro-grid dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 850;
+  line-height: 1.15;
+}
+
 .recipe-actions {
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(120px, auto);
