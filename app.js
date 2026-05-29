@@ -408,10 +408,10 @@ function renderRecipe(dish) {
           </select>
         </label>
       </div>
-      <figure class="dish-photo-wrap">
-        <img class="dish-photo" src="${dishImageUrl(dish)}" alt="${dish.name}" loading="lazy" onerror="this.src='${generatedDishImageUrl(dish)}'; this.closest('.dish-photo-wrap').classList.add('image-fallback');">
+      <figure class="dish-photo-wrap ${photo ? "" : "needs-photo"}">
+        ${photo ? `<img class="dish-photo" src="${photo.url}" alt="${dish.name}" loading="lazy" onerror="showPhotoPlaceholder(this, '${escapeAttribute(dish.name)}');">` : photoPlaceholderMarkup(dish)}
         <figcaption>
-          ${photo ? `<a href="${photo.source}" target="_blank" rel="noreferrer">${dish.name} photo</a>` : `${dish.name} photo`}
+          ${photo ? `<a href="${photo.source}" target="_blank" rel="noreferrer">${dish.name} photo</a>` : `Photo coming soon`}
         </figcaption>
       </figure>
     </div>
@@ -526,12 +526,6 @@ function capitalize(value) {
   return value.charAt(0).toUpperCase() + value.slice(1);
 }
 
-function dishImageUrl(dish) {
-  const photo = dishPhoto(dish);
-  if (photo) return photo.url;
-  return `https://placeholdpicsum.dev/photo/seed/${encodeURIComponent(dish.name)}/900/650`;
-}
-
 function generatedDishImageUrl(dish) {
   const type = dishType(dish);
   const colors = {
@@ -566,6 +560,33 @@ function generatedDishImageUrl(dish) {
     </svg>
   `;
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
+function photoPlaceholderMarkup(dish) {
+  return `
+    <div class="photo-placeholder" role="img" aria-label="Photo coming soon for ${escapeAttribute(dish.name)}">
+      <img class="dish-photo" src="${generatedDishImageUrl(dish)}" alt="" aria-hidden="true">
+      <div class="photo-placeholder-copy">
+        <span>Photo coming soon</span>
+        <strong>${dish.name}</strong>
+      </div>
+    </div>
+  `;
+}
+
+function showPhotoPlaceholder(image, dishName) {
+  const wrapper = image.closest(".dish-photo-wrap");
+  wrapper.classList.add("needs-photo");
+  wrapper.querySelector("figcaption").textContent = "Photo coming soon";
+  image.outerHTML = `
+    <div class="photo-placeholder" role="img" aria-label="Photo coming soon for ${dishName}">
+      <img class="dish-photo" src="${generatedDishImageUrl({ name: dishName, ingredients: [] })}" alt="" aria-hidden="true">
+      <div class="photo-placeholder-copy">
+        <span>Photo coming soon</span>
+        <strong>${dishName}</strong>
+      </div>
+    </div>
+  `;
 }
 
 function dishPhoto(dish) {
