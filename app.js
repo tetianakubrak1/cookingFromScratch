@@ -611,6 +611,103 @@ function formatQuantity(value) {
   return String(Number(rounded.toFixed(2)));
 }
 
+function parseIngredient(text, amount) {
+  const trimmed = text.trim();
+  const unitMatch = trimmed.match(/^((?:\d+(?:\.\d+)?)|(?:\d+\/\d+))\s+(g|ml|tbsp|tsp)\s+(.+)$/i);
+  if (unitMatch) {
+    return {
+      amount,
+      unit: unitMatch[2].toLowerCase(),
+      name: normalizeIngredientName(unitMatch[3]),
+      displayName: unitMatch[3]
+    };
+  }
+
+  const countMatch = trimmed.match(/^((?:\d+(?:\.\d+)?)|(?:\d+\/\d+))\s+(.+)$/);
+  if (countMatch && typeof amount === "number" && !countMatch[2].startsWith("to ")) {
+    return {
+      amount,
+      unit: "",
+      name: normalizeIngredientName(countMatch[2]),
+      displayName: countMatch[2]
+    };
+  }
+
+  return {
+    amount: null,
+    unit: "",
+    name: normalizeIngredientName(trimmed),
+    displayName: trimmed
+  };
+}
+
+function normalizeIngredientName(name) {
+  return name
+    .toLowerCase()
+    .replace("canned tomatoes or passata", "passata or canned tomatoes")
+    .replace(/\bcloves\b/g, "clove")
+    .replace(/\beggs\b/g, "egg")
+    .replace(/\bleaves\b/g, "leaf")
+    .replace(/\bsheets\b/g, "sheet")
+    .replace(/\bcans\b/g, "can")
+    .replace(/\bslices\b/g, "slice")
+    .replace(/\blemons\b/g, "lemon")
+    .replace(/\bonions\b/g, "onion")
+    .replace(/\bcucumbers\b/g, "cucumber")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function pluralizeIngredient(name, quantity) {
+  if (quantity === 1) return name;
+  return name
+    .replace(/\bclove\b/g, "cloves")
+    .replace(/\begg\b/g, "eggs")
+    .replace(/\bleaf\b/g, "leaves")
+    .replace(/\bsheet\b/g, "sheets")
+    .replace(/\bcan\b/g, "cans")
+    .replace(/\bslice\b/g, "slices")
+    .replace(/\blemon\b/g, "lemons")
+    .replace(/\bonion\b/g, "onions")
+    .replace(/\bcucumber\b/g, "cucumbers");
+}
+
+function buildShoppingGroups(week) {
+  const grouped = {};
+  week.forEach((dish) => {
+    dish.ingredients.forEach(([category, text, amount]) => {
+      const label = t(`categories.${category}`) || category;
+      const parsed = parseIngredient(text, amount);
+      const key = `${parsed.name}|${parsed.unit}`;
+      grouped[label] ||= new Map();
+      const existing = grouped[label].get(key);
+
+      if (existing && parsed.amount !== null && existing.amount !== null) {
+        existing.amount += parsed.amount * state.servings;
+        return;
+      }
+
+      if (existing) return;
+
+      grouped[label].set(key, {
+        amount: parsed.amount === null ? null : parsed.amount * state.servings,
+        unit: parsed.unit,
+        name: parsed.name,
+        displayName: parsed.displayName,
+        text: parsed.amount === null ? text : null
+      });
+    });
+  });
+  return grouped;
+}
+
+function formatShoppingItem(item) {
+  if (item.amount === null) return item.text;
+  const quantity = formatQuantity(item.amount);
+  const name = item.unit ? item.displayName : pluralizeIngredient(item.displayName, item.amount);
+  return [quantity, item.unit, name].filter(Boolean).join(" ");
+}
+
 function render() {
   const cuisine = cuisines[state.cuisine];
   const week = getWeek();
@@ -724,14 +821,7 @@ function renderRecipe(dish) {
 }
 
 function renderShopping(week) {
-  const grouped = {};
-  week.forEach((dish) => {
-    dish.ingredients.forEach(([category, text, amount]) => {
-      const label = t(`categories.${category}`) || category;
-      grouped[label] ||= [];
-      grouped[label].push(scaledText(text, amount));
-    });
-  });
+  const grouped = buildShoppingGroups(week);
 
   shoppingList.replaceChildren();
   Object.entries(grouped).forEach(([category, items]) => {
@@ -739,7 +829,7 @@ function renderShopping(week) {
     card.className = "shopping-card";
     card.innerHTML = `
       <h3>${category}</h3>
-      <ul class="list">${[...new Set(items)].map((item) => `<li>${item}</li>`).join("")}</ul>
+      <ul class="list">${[...items.values()].map((item) => `<li>${formatShoppingItem(item)}</li>`).join("")}</ul>
     `;
     shoppingList.append(card);
   });
